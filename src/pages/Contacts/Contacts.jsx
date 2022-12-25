@@ -1,10 +1,10 @@
 import './Contacts.scss';
 
+import Header from "../../components/Header/Header";
+
 const Contacts = () => {
   return (
-    <h1 style={{textAlign: 'center'}}>
-      Contacts
-    </h1>
+    <Header />
   );
 };
 

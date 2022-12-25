@@ -1,10 +1,10 @@
 import './Shop.scss';
 
+import Header from "../../components/Header/Header";
+
 const Shop = () => {
   return (
-    <h1 style={{textAlign: 'center'}}>
-      Shop
-    </h1>
+    <Header />
   );
 };
 

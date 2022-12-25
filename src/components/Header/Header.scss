@@ -1,0 +1,43 @@
+@import "../../styles/vars";
+
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(50);
+  }
+
+  &__busket {
+    display: block;
+    width: rem(24);
+    height: rem(24);
+    background-image: url("../../assets/images/svg/bag.svg");
+  }
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: rem(10);
+    width: rem(28);
+    height: rem(28);
+    fill: $green;
+    transition: fill 0.5s ease, background-color 0.5s ease;
+
+    @include hover {
+      fill: $white;
+      background-color: $green;
+    }
+  }
+
+  &__icon {
+    width: rem(16);
+    height: rem(16);
+  }
+}

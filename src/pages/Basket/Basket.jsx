@@ -1,10 +1,10 @@
 import './Basket.scss';
 
+import Header from "../../components/Header/Header";
+
 const Basket = () => {
   return (
-    <h1 style={{textAlign: 'center'}}>
-      Basket
-    </h1>
+    <Header />
   );
 };
 

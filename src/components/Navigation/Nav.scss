@@ -1,0 +1,44 @@
+@import "../../styles/vars";
+
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(45);
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: $black;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $green;
+      transform: scale(0);
+      transition: transform 0.5s ease;
+    }
+
+    &--current {
+      color: $green;
+      pointer-events: none;
+    }
+
+    @include hover {
+      &::after {
+        transform: none;
+      }
+    }
+  }
+}
