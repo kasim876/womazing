@@ -1,6 +1,10 @@
 @import "../../styles/vars";
 
 .header {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+
   &__container {
     display: flex;
     align-items: center;
