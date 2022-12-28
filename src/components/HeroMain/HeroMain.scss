@@ -65,7 +65,7 @@
 
   &__images {
     position: relative;
-    margin-left: rem(70);
+    margin-left: rem(100);
     padding-top: rem(120);
     padding-bottom: rem(60);
     width: 100%;
@@ -75,13 +75,13 @@
 
   &__first-image {
     position: relative;
-    left: rem(20);
+    left: rem(40);
     display: block;
   }
 
   &__second-image {
     position: absolute;
-    left: rem(315);
+    left: rem(370);
     top: rem(240);
     z-index: 2;
     display: block;
@@ -89,7 +89,7 @@
 
   &__third-image {
     position: absolute;
-    left: rem(-100);
+    left: rem(-80);
     bottom: 0;
     z-index: 2;
     display: block;
@@ -99,7 +99,7 @@
 .hero-main-slider {
   padding-top: rem(140);
   width: 100%;
-  max-width: rem(570);
+  max-width: rem(560);
 
   &__pagination {
     display: flex;
