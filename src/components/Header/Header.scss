@@ -20,6 +20,11 @@
     height: rem(24);
     background-image: url("../../assets/images/svg/bag.svg");
   }
+
+  &--fixed {
+    box-shadow: 0 0 10px rgb(25 25 25 / 10%);
+    background-color: $white;
+  }
 }
 
 .header-contacts {
