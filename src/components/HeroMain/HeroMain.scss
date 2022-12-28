@@ -1,6 +1,32 @@
 @import "../../styles/mixins";
 @import "../../styles/vars";
 
+@keyframes arrow-animation {
+  0% {
+    transform: translateY(0%);
+  }
+
+  20% {
+    transform: translateY(-20%);
+  }
+
+  40% {
+    transform: translateY(0%);
+  }
+
+  60% {
+    transform: translateY(-20%);
+  }
+
+  80% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .hero-main {
   &__container {
     display: flex;
@@ -44,7 +70,14 @@
 
     @include hover {
       stroke: $white;
-      background-color: $green;
+      background-color: rgba(110 156 159 / 50%);
+
+      svg {
+        animation-name: arrow-animation;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        animation-iteration-count: infinite;
+      }
     }
   }
 
