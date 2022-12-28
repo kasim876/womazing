@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import HeroMain from "../../components/HeroMain/HeroMain";
 import Products from "../../components/Products/Products";
 import Advantages from "../../components/Advantages/Advantages";
+import Team from "../../components/Team/Team";
 
 import './Home.scss';
 
@@ -31,6 +32,7 @@ const Home = () => {
         <HeroMain />
         <Products />
         <Advantages />
+        <Team />
       </main>
     </>
   );
