@@ -19,7 +19,7 @@ const Header = () => {
           <button className="btn-reset header-contacts__btn" aria-label="Заказать обратный звонок">
             <Phone className="header-contacts__icon" />
           </button>
-          <a href="tel:+74958235412" className="header-contacts__link">+7 (495) 823-54-12</a>
+          <a href="tel:+74958235412" className="animation-link header-contacts__link">+7 (495) 823-54-12</a>
         </div>
         <Link to={BASKET_ROUTE} className="header__busket" title="Открыть корзину"></Link>
       </div>
