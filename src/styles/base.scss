@@ -1,0 +1,73 @@
+.page {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page__body {
+  min-width: rem(320);
+  font-family: $font-family;
+  color: $black;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $container-offset;
+  max-width: calc($content-width + $container-offset * 2);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.btn-reset {
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
