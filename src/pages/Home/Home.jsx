@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import Header from "../../components/Header/Header";
 import HeroMain from "../../components/HeroMain/HeroMain";
 import Products from "../../components/Products/Products";
+import Advantages from "../../components/Advantages/Advantages";
 
 import './Home.scss';
 
@@ -29,6 +30,7 @@ const Home = () => {
       <main>
         <HeroMain />
         <Products />
+        <Advantages />
       </main>
     </>
   );
