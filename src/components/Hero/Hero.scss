@@ -1,0 +1,14 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.hero {
+  padding-top: rem(270);
+  padding-bottom: rem(200);
+
+  &__title {
+    margin-bottom: em(25, 55);
+    font-weight: 500;
+    font-size: rem(55);
+    line-height: 110%;
+  }
+}

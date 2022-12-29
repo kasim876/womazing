@@ -1,0 +1,25 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      margin: rem(14);
+      width: rem(14);
+      height: rem(1);
+      background-color: $black;
+    }
+
+    &:last-child {
+      color: #909090;
+    }
+  }
+}

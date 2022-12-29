@@ -28,7 +28,7 @@ const HeroMain = () => {
   }
   
   return (
-    <section className="hero-main">
+    <section className="js-hero hero-main">
       <div className="hero-main__container">
         <div className="hero-main-slider">
           <Swiper
