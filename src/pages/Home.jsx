@@ -1,13 +1,11 @@
 import {useEffect} from "react";
 
-import Header from "../../components/Header/Header";
-import HeroMain from "../../components/HeroMain/HeroMain";
-import Products from "../../components/Products/Products";
-import Advantages from "../../components/Advantages/Advantages";
-import Team from "../../components/Team/Team";
-import Footer from "../../components/Footer/Footer";
-
-import './Home.scss';
+import Header from "../components/Header/Header";
+import HeroMain from "../components/HeroMain/HeroMain";
+import Products from "../components/Products/Products";
+import Advantages from "../components/Advantages/Advantages";
+import Team from "../components/Team/Team";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   const HEADER_FIXED_CLASS = 'header--fixed';
@@ -23,8 +21,8 @@ const Home = () => {
   }, { threshold: 0.99 })
 
   useEffect(() => {
-    observer.observe(document.querySelector('.hero-main'));
-  })
+    observer.observe(document.querySelector('.js-hero'));
+  }, [])
 
   return (
     <>

@@ -1,5 +1,3 @@
-import './BookingSuccess.scss';
-
 const BookingSuccess = () => {
   return (
     <h1 style={{textAlign: 'center'}}>
