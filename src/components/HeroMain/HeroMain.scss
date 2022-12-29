@@ -68,6 +68,10 @@
     background-color: rgba(110 156 159 / 10%);
     transition: stroke 0.5s ease, background-color 0.5s ease;
 
+    svg {
+      pointer-events: none;
+    }
+
     @include hover {
       stroke: $white;
       background-color: rgba(110 156 159 / 50%);

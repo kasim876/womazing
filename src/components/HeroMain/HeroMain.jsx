@@ -15,6 +15,18 @@ import 'swiper/css/effect-fade';
 import './HeroMain.scss';
 
 const HeroMain = () => {
+  const scrollToSection = (e) => {
+    e.preventDefault();
+
+    const targetSection = document.querySelector(e.target.getAttribute('href'))
+    const scrollY = targetSection.offsetTop - document.querySelector('.header').clientHeight;
+
+    window.scrollTo({
+      top: scrollY,
+      behavior: 'smooth'
+    })
+  }
+  
   return (
     <section className="hero-main">
       <div className="hero-main__container">
@@ -49,7 +61,7 @@ const HeroMain = () => {
             </SwiperSlide>
           </Swiper>
           <div className="hero-main__links">
-            <a href="#products" className="hero-main__next-section-link">
+            <a href="#products" className="hero-main__next-section-link" onClick={scrollToSection}>
               <Arrow />
             </a>
             <Link to={SHOP_ROUTE} className="hero-main__shop-link">Открыть магазин</Link>
