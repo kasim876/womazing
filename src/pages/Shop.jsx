@@ -1,6 +1,5 @@
 import {useEffect} from "react";
 
-import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 
 const Shop = () => {
@@ -19,14 +18,11 @@ const Shop = () => {
   useEffect(() => {
     observer.observe(document.querySelector('.js-hero'));
   }, [])
-  
+
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-      </main>
-    </>
+    <main>
+      <Hero />
+    </main>
   );
 };
 
