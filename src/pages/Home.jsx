@@ -19,7 +19,11 @@ const Home = () => {
   }, { threshold: 0.99 })
 
   useEffect(() => {
-    observer.observe(document.querySelector('.js-hero'));
+    const hero = document.querySelector('.js-hero');
+
+    observer.observe(hero);
+
+    return () => observer.unobserve(hero)
   }, [])
   
   return (
