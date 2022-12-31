@@ -19,6 +19,22 @@ export const ROUTES = [
     element: <Shop />
   },
   {
+    path: SHOP_ROUTE + '/t-shirt',
+    element: <Shop />
+  },
+  {
+    path: SHOP_ROUTE + '/swimsuit',
+    element: <Shop />
+  },
+  {
+    path: SHOP_ROUTE + '/sweatshirt',
+    element: <Shop />
+  },
+  {
+    path: SHOP_ROUTE + '/hoody',
+    element: <Shop />
+  },
+  {
     path: ABOUT_ROUTE,
     element: <About />
   },
