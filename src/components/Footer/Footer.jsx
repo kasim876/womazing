@@ -33,16 +33,16 @@ const Footer = () => {
           </div>
           <ul className="footer__categories">
             <li className="footer__categories-item">
-              <Link to={SHOP_ROUTE} className="animation-link footer__categories-link">Пальто</Link>
+              <Link to={SHOP_ROUTE + '/t-shirt'} className="animation-link footer__categories-link">Футболки</Link>
             </li>
             <li className="footer__categories-item">
-              <Link to={SHOP_ROUTE} className="animation-link footer__categories-link">Свитшоты</Link>
+              <Link to={SHOP_ROUTE + '/swimsuit'} className="animation-link footer__categories-link">Купальники</Link>
             </li>
             <li className="footer__categories-item">
-              <Link to={SHOP_ROUTE} className="animation-link footer__categories-link">Кардиганы</Link>
+              <Link to={SHOP_ROUTE + '/sweatshirt'} className="animation-link footer__categories-link">Свитшоты</Link>
             </li>
             <li className="footer__categories-item">
-              <Link to={SHOP_ROUTE} className="animation-link footer__categories-link">Толстови</Link>
+              <Link to={SHOP_ROUTE + '/hoody'} className="animation-link footer__categories-link">Толстовки</Link>
             </li>
           </ul>
           <div className="footer__end-col">
