@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-import './ProductItem.scss';
+import './ProductsItem.scss';
 
 const ProductItem = ({route, image, name, oldPrice, price}) => {
   oldPrice = oldPrice && <del>{oldPrice}</del>
