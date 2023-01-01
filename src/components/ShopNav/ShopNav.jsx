@@ -16,7 +16,7 @@ const ShopNav = () => {
   const list = data.map(({link, name}) => {
     return (
       <li className="shop-nav__item" key={link}>
-        <NavLink to={link} className={setClasses} end>{name}</NavLink>
+        <NavLink to={link} className={setClasses} data-category={name} end>{name}</NavLink>
       </li>
     )
   })
