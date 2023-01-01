@@ -15,8 +15,8 @@ const ShopContent = ({products, isLoading}) => {
           route={PRODUCT_ROUTE + '/' + id}
           image={process.env.REACT_APP_API_URL + img}
           name={name}
-          oldPrice={oldPrice && '$' + oldPrice}
-          price={'$' + price}
+          oldPrice={oldPrice && oldPrice + '₽'}
+          price={price + '₽'}
         />
       </li>
     )
