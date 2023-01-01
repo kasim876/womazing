@@ -1,12 +1,12 @@
-import {useEffect} from "react";
-import {BrowserRouter, useLocation} from "react-router-dom";
+import {useEffect} from 'react';
+import {BrowserRouter, useLocation} from 'react-router-dom';
 
 import 'normalize.css';
 import './styles/App.scss';
 
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import AppRouter from "./components/AppRouter";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import AppRouter from './components/AppRouter';
 
 function App() {
   const AppWrapper = ({children}) => {
@@ -25,20 +25,20 @@ function App() {
           } else {
             header.classList.add(HEADER_FIXED_CLASS);
           }
-        })
-      }, { threshold: 0.99 })
+        });
+      }, { threshold: 0.99 });
   
       observer.observe(hero);
   
-      return () => observer.unobserve(hero)
-    }, [location.pathname])
+      return () => observer.unobserve(hero);
+    }, [location.pathname]);
 
     useEffect(() => {
       document.documentElement.scrollTo(0, 0);
     }, [location.pathname]);
 
-    return children
-  }
+    return children;
+  };
 
   return (
     <BrowserRouter>

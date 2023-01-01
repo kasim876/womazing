@@ -1,12 +1,12 @@
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 
-import {BASKET_ROUTE} from "../../utils/consts";
+import {BASKET_ROUTE} from '../../utils/consts';
 
-import {ReactComponent as PhoneIcon} from "../../assets/images/svg/phone.svg";
+import {ReactComponent as PhoneIcon} from '../../assets/images/svg/phone.svg';
 
-import Logo from "../Logo/Logo";
-import Nav from "../Navigation/Nav";
-import Phone from "../Phone/Phone"
+import Logo from '../Logo/Logo';
+import Nav from '../Navigation/Nav';
+import Phone from '../Phone/Phone';
 
 import './Header.scss';
 

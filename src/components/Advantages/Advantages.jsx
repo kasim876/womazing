@@ -28,7 +28,7 @@ const Advantages = () => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Advantages
+export default Advantages;

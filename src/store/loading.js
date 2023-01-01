@@ -1,4 +1,4 @@
-import {makeAutoObservable} from "mobx"
+import {makeAutoObservable} from 'mobx';
 
 class Loading {
   constructor() {
@@ -15,4 +15,4 @@ class Loading {
   }
 }
 
-export default new Loading()
+export default new Loading();

@@ -5,7 +5,7 @@ const ProductsList = ({items}) => {
     <ul className="products-list">
       {items}
     </ul>
-  )
-}
+  );
+};
 
-export default ProductsList
+export default ProductsList;

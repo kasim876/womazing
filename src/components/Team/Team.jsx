@@ -1,14 +1,14 @@
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Pagination, Navigation} from 'swiper';
 
-import {ABOUT_ROUTE} from "../../utils/consts";
+import {ABOUT_ROUTE} from '../../utils/consts';
 
-import {ReactComponent as PrevArrow} from "../../assets/images/svg/nav-arrow-prev.svg"
-import {ReactComponent as NextArrow} from "../../assets/images/svg/nav-arrow-next.svg"
-import team1 from "../../assets/images/team1.jpg";
-import team2 from "../../assets/images/team2.jpg";
-import team3 from "../../assets/images/team3.jpg";
+import {ReactComponent as PrevArrow} from '../../assets/images/svg/nav-arrow-prev.svg';
+import {ReactComponent as NextArrow} from '../../assets/images/svg/nav-arrow-next.svg';
+import team1 from '../../assets/images/team1.jpg';
+import team2 from '../../assets/images/team2.jpg';
+import team3 from '../../assets/images/team3.jpg';
 
 import 'swiper/scss';
 
@@ -31,7 +31,7 @@ const Team = () => {
               navigation={{
                 nextEl: '.team__slider-nav-btn-next',
                 prevEl: '.team__slider-nav-btn-prev',
-                enabled: true
+                enabled: true,
               }}
               pagination={{
                 el: '.team__slider-pagination',
@@ -67,7 +67,7 @@ const Team = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Team
+export default Team;

@@ -1,61 +1,61 @@
-import {HOME_ROUTE, SHOP_ROUTE, ABOUT_ROUTE, PRODUCT_ROUTE, CONTACTS_ROUTE, BASKET_ROUTE, BOOKING_ROUTE, BOOKING_SUCCESS_ROUTE} from "./utils/consts";
+import {HOME_ROUTE, SHOP_ROUTE, ABOUT_ROUTE, PRODUCT_ROUTE, CONTACTS_ROUTE, BASKET_ROUTE, BOOKING_ROUTE, BOOKING_SUCCESS_ROUTE} from './utils/consts';
 
-import Home from "./pages/Home";
-import Shop from "./pages/Shop";
-import About from "./pages/About";
-import Product from "./pages/Product";
-import Contacts from "./pages/Contacts";
-import Basket from "./pages/Basket";
-import Booking from "./pages/Booking";
-import BookingSuccess from "./pages/BookingSuccess";
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import About from './pages/About';
+import Product from './pages/Product';
+import Contacts from './pages/Contacts';
+import Basket from './pages/Basket';
+import Booking from './pages/Booking';
+import BookingSuccess from './pages/BookingSuccess';
 
 export const ROUTES = [
   {
     path: HOME_ROUTE,
-    element: <Home />
+    element: <Home />,
   },
   {
     path: SHOP_ROUTE,
-    element: <Shop />
+    element: <Shop />,
   },
   {
     path: SHOP_ROUTE + '/t-shirt',
-    element: <Shop />
+    element: <Shop />,
   },
   {
     path: SHOP_ROUTE + '/swimsuit',
-    element: <Shop />
+    element: <Shop />,
   },
   {
     path: SHOP_ROUTE + '/sweatshirt',
-    element: <Shop />
+    element: <Shop />,
   },
   {
     path: SHOP_ROUTE + '/hoody',
-    element: <Shop />
+    element: <Shop />,
   },
   {
     path: ABOUT_ROUTE,
-    element: <About />
+    element: <About />,
   },
   {
     path: PRODUCT_ROUTE,
-    element: <Product />
+    element: <Product />,
   },
   {
     path: CONTACTS_ROUTE,
-    element: <Contacts />
+    element: <Contacts />,
   },
   {
     path: BASKET_ROUTE,
-    element: <Basket />
+    element: <Basket />,
   },
   {
     path: BOOKING_ROUTE,
-    element: <Booking />
+    element: <Booking />,
   },
   {
     path: BOOKING_SUCCESS_ROUTE,
-    element: <BookingSuccess />
-  }
-]
+    element: <BookingSuccess />,
+  },
+];

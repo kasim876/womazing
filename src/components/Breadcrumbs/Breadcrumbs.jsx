@@ -5,9 +5,9 @@ const Breadcrumbs = ({list}) => {
     <ul className="breadcrumbs">
       {
         list.map(item => <li className="text-md breadcrumbs__item" key={item}>{item}</li>
-      )}
+        )}
     </ul>
-  )
-}
+  );
+};
 
-export default Breadcrumbs
+export default Breadcrumbs;

@@ -1,13 +1,13 @@
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {EffectFade, Pagination} from 'swiper'
+import {EffectFade, Pagination} from 'swiper';
 
-import {SHOP_ROUTE} from "../../utils/consts";
+import {SHOP_ROUTE} from '../../utils/consts';
 
-import {ReactComponent as Arrow} from "../../assets/images/svg/arrow.svg";
-import mainImage from "../../assets/images/hero-image1.jpg";
-import secondImage from "../../assets/images/hero-image2.jpg";
-import thirdImage from "../../assets/images/hero-image3.jpg";
+import {ReactComponent as Arrow} from '../../assets/images/svg/arrow.svg';
+import mainImage from '../../assets/images/hero-image1.jpg';
+import secondImage from '../../assets/images/hero-image2.jpg';
+import thirdImage from '../../assets/images/hero-image3.jpg';
 
 import 'swiper/scss';
 import 'swiper/css/effect-fade';
@@ -18,14 +18,14 @@ const HeroMain = () => {
   const scrollToSection = (e) => {
     e.preventDefault();
 
-    const targetSection = document.querySelector(e.target.getAttribute('href'))
+    const targetSection = document.querySelector(e.target.getAttribute('href'));
     const scrollY = targetSection.offsetTop - document.querySelector('.header').clientHeight;
 
     window.scrollTo({
       top: scrollY,
-      behavior: 'smooth'
-    })
-  }
+      behavior: 'smooth',
+    });
+  };
   
   return (
     <section className="js-hero hero-main">

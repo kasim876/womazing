@@ -10,7 +10,7 @@ const ShopNav = () => {
 
     const isActiveClass = isActive ? ' ' + ACTIVE_CLASS_NAME : '';
 
-    return "text-md shop-nav__link" + isActiveClass;
+    return 'text-md shop-nav__link' + isActiveClass;
   };
   
   const list = data.map(({link, name}) => {
@@ -18,14 +18,14 @@ const ShopNav = () => {
       <li className="shop-nav__item" key={link}>
         <NavLink to={link} className={setClasses} data-category={name} end>{name}</NavLink>
       </li>
-    )
-  })
+    );
+  });
   
   return (
     <ul className="shop-nav">
       {list}    
     </ul>
-  )
-}
+  );
+};
 
-export default ShopNav
+export default ShopNav;

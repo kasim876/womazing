@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 
-import {HOME_ROUTE} from "../../utils/consts";
+import {HOME_ROUTE} from '../../utils/consts';
 
 import logo from '../../assets/images/logo.png';
 

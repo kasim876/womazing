@@ -3,22 +3,22 @@ import {SHOP_ROUTE} from '../../utils/consts';
 export default [
   {
     link: SHOP_ROUTE,
-    name: "Все",
+    name: 'Все',
   },
   {
     link: SHOP_ROUTE + '/t-shirt',
-    name: "Футболки",
+    name: 'Футболки',
   },
   {
     link: SHOP_ROUTE + '/swimsuit',
-    name: "Купальники",
+    name: 'Купальники',
   },
   {
     link: SHOP_ROUTE + '/sweatshirt',
-    name: "Свитшоты",
+    name: 'Свитшоты',
   },
   {
     link: SHOP_ROUTE + '/hoody',
-    name: "Толстовки",
+    name: 'Толстовки',
   },
-]
+];

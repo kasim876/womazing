@@ -3,7 +3,7 @@ import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
 import './Hero.scss';
 
 const Hero = () => {
-  const breadcrumbsItems = ["Главная", "Магазин"]
+  const breadcrumbsItems = ['Главная', 'Магазин'];
   
   return (
     <section className="js-hero hero">
@@ -12,7 +12,7 @@ const Hero = () => {
         <Breadcrumbs list={breadcrumbsItems} />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

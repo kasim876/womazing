@@ -19,8 +19,8 @@ const ShopContent = ({products, isLoading}) => {
           price={price + '₽'}
         />
       </li>
-    )
-  })
+    );
+  });
   
   return (
     <section className="shop-content">
@@ -29,7 +29,7 @@ const ShopContent = ({products, isLoading}) => {
         {isLoading ? <Spinner /> : <ProductsList items={items} />}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ShopContent
+export default ShopContent;
