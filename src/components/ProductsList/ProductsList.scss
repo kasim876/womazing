@@ -1,0 +1,8 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(65) rem(30);
+}
