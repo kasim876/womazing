@@ -57,6 +57,7 @@
   &__img {
     display: block;
     border-radius: inherit;
+    height: rem(478);
   }
 
   &__name-link {
@@ -64,8 +65,13 @@
   }
 
   &__name {
+    overflow: hidden;
+    max-width: rem(340);
     font-weight: 500;
     font-size: rem(20);
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
   }
 
   &__price {
