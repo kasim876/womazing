@@ -12,27 +12,6 @@ const Shop = observer(() => {
   const location = useLocation();
   const [products, setProducts] = useState([]);
 
-  
-  const observer = new IntersectionObserver((entries, observer) => {
-    const HEADER_FIXED_CLASS = 'header--fixed';
-
-    entries.forEach(entry => {
-      if(entry.intersectionRatio >= 0.99) {
-        document.querySelector('.header').classList.remove(HEADER_FIXED_CLASS);
-      } else {
-        document.querySelector('.header').classList.add(HEADER_FIXED_CLASS);
-      }
-    })
-  }, { threshold: 0.99 })
-
-  useEffect(() => {
-    const hero = document.querySelector('.js-hero');
-
-    observer.observe(hero);
-
-    return () => observer.unobserve(hero)
-  }, [])
-
   useEffect(() => {
     const CancelToken = axios.CancelToken;
     const source = CancelToken.source();
