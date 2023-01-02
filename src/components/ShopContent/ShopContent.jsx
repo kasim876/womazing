@@ -1,4 +1,8 @@
+import {observer} from 'mobx-react-lite';
+
 import {PRODUCT_ROUTE} from '../../utils/consts';
+
+import product from '../../store/ProductStore';
 
 import Spinner from '../Spinner/Spinner';
 import ShopNav from '../ShopNav/ShopNav';
@@ -7,8 +11,8 @@ import ProductsList from '../ProductsList/ProductsList';
 
 import './ShopContent.scss';
 
-const ShopContent = ({products, isLoading}) => {
-  const items = products.map(({id, img, name, oldPrice, price}) => {
+const ShopContent = observer(() => {
+  const items = product.products.map(({id, img, name, oldPrice, price}) => {
     return (
       <li key={name}>
         <ProductsItem
@@ -26,10 +30,10 @@ const ShopContent = ({products, isLoading}) => {
     <section className="shop-content">
       <div className="container">
         <ShopNav />
-        {isLoading ? <Spinner /> : <ProductsList items={items} />}
+        {product.loading ? <Spinner /> : <ProductsList items={items} />}
       </div>
     </section>
   );
-};
+});
 
 export default ShopContent;

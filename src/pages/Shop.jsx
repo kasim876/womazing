@@ -1,35 +1,37 @@
-import {useState, useEffect} from 'react';
+import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {observer} from 'mobx-react-lite';
 import axios from 'axios';
 
-import loading from '../store/loading';
+import {fetchProducts} from '../http/productAPI';
+
+import product from '../store/ProductStore';
 
 import Hero from '../components/Hero/Hero';
 import ShopContent from '../components/ShopContent/ShopContent';
 
 const Shop = observer(() => {
   const location = useLocation();
-  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const CancelToken = axios.CancelToken;
-    const source = CancelToken.source();
+    const source = axios.CancelToken.source();
     
-    loading.setIsLoading(true);
+    product.setCurrentType(document.querySelector('.shop-nav__link--current').dataset.category);
+    product.setLoading(true);
 
-    axios
-      .get(process.env.REACT_APP_API_URL + 'product', {
-        cancelToken: source.token,
-        params: {
-          category: document.querySelector('.shop-nav__link--current').dataset.category,
-        },
-      })
-      .then((res) => {
-        setProducts(res.data);
+    fetchProducts(
+      {
+        category: product.currentType,
+        page: product.page,
+      },
+      source.token
+    )
+      .then(data => {
+        product.setTotalCount(data.count);
+        product.setProducts(data.rows);
       })
       .then(() => {
-        loading.setIsLoading(false);
+        product.setLoading(false);
       })
       .catch(function(error) {
         if (axios.isCancel(error)) {
@@ -40,10 +42,40 @@ const Shop = observer(() => {
     return () => source.cancel();
   }, [location.pathname]);
 
+  useEffect(() => {
+    const source = axios.CancelToken.source();
+    
+    document.documentElement.scrollTo(0, 0);
+    product.setLoading(true);
+
+    fetchProducts(
+      {
+        category: product.currentType,
+        page: product.page,
+      },
+      source.token
+    )
+      .then(data => {
+        product.setTotalCount(data.count);
+        product.setProducts(data.rows);
+      })
+      .then(() => {
+        product.setLoading(false);
+      })
+      .catch(function(error) {
+        if (axios.isCancel(error)) {
+          return;
+        }
+      });
+
+    return () => source.cancel();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product.page]);
+
   return (
     <main>
       <Hero />
-      <ShopContent products={products} isLoading={loading.isLoading} />
+      <ShopContent />
     </main>
   );
 });
