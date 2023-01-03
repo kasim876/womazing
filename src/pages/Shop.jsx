@@ -46,7 +46,7 @@ const Shop = observer(() => {
 
   return (
     <main>
-      <Hero />
+      <Hero title="Магазин" />
       <ShopContent />
     </main>
   );
