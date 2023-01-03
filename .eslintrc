@@ -11,6 +11,7 @@
     "indent": ["warn", 2],
     "semi": ["error", "always"],
     "import/no-anonymous-default-export": "off",
+    "react-hooks/exhaustive-deps": "off",
     "import/order": [
       "error",
       {
