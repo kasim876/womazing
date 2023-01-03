@@ -16,8 +16,12 @@ class ProductStore {
   }
 
   setCurrentType(type) {
-    this._page = 1;
-    this._currentType = type;
+    if (this.currentType === type) {
+      return;
+    } else {
+      this._page = 1;
+      this._currentType = type;
+    }
   }
 
   setProducts(products) {

@@ -16,37 +16,9 @@ const Shop = observer(() => {
   useEffect(() => {
     const source = axios.CancelToken.source();
     
-    product.setCurrentType(document.querySelector('.shop-nav__link--current').dataset.category);
-    product.setLoading(true);
-
-    fetchProducts(
-      {
-        category: product.currentType,
-        page: product.page,
-      },
-      source.token
-    )
-      .then(data => {
-        product.setTotalCount(data.count);
-        product.setProducts(data.rows);
-      })
-      .then(() => {
-        product.setLoading(false);
-      })
-      .catch(function(error) {
-        if (axios.isCancel(error)) {
-          return;
-        }
-      });
-
-    return () => source.cancel();
-  }, [location.pathname]);
-
-  useEffect(() => {
-    const source = axios.CancelToken.source();
-    
     document.documentElement.scrollTo(0, 0);
     product.setLoading(true);
+    product.setCurrentType(document.querySelector('.shop-nav__link--current').dataset.category);
 
     fetchProducts(
       {
@@ -69,8 +41,8 @@ const Shop = observer(() => {
       });
 
     return () => source.cancel();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [product.page]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, product.page]);
 
   return (
     <main>
