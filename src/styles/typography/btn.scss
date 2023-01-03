@@ -1,0 +1,12 @@
+.btn-green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background-color: $green;
+  transition: background-color 0.5s ease;
+
+  @include hover {
+    background-color: #509498;
+  }
+}
