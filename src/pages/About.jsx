@@ -1,8 +1,10 @@
-import Header from '../components/Header/Header';
+import Hero from '../components/Hero/Hero';
 
 const About = () => {
   return (
-    <Header />
+    <main>
+      <Hero title="О бренде" />
+    </main>
   );
 };
 
