@@ -20,6 +20,15 @@
 
     &:last-child {
       color: #909090;
+      pointer-events: none;
+    }
+  }
+
+  &__link {
+    transition: color 0.5s ease;
+
+    @include hover {
+      color: $green;
     }
   }
 }
