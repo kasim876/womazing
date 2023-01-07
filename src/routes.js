@@ -39,7 +39,7 @@ export const ROUTES = [
     element: <About />,
   },
   {
-    path: PRODUCT_ROUTE,
+    path: PRODUCT_ROUTE + '/:id',
     element: <Product />,
   },
   {
