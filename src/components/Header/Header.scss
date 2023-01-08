@@ -14,11 +14,31 @@
     padding-bottom: rem(50);
   }
 
-  &__busket {
+  &__basket-wrap {
+    position: relative;
     display: block;
-    width: rem(24);
-    height: rem(24);
-    background-image: url("../../assets/images/svg/bag.svg");
+    width: rem(36);
+    height: rem(36);
+  }
+
+  &__basket {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__basket-count {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    border-radius: 50%;
+    width: rem(18);
+    height: rem(18);
+    font-size: rem(12);
+    text-align: center;
+    color: $white;
+    background-color: #998e78;
   }
 
   &--fixed {
