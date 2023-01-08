@@ -1,0 +1,132 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.product-content {
+  padding: $section-offset 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: rem(70);
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(60);
+  }
+
+  &__price-wrap {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 110%;
+  }
+
+  &__price {
+    display: block;
+    margin-right: rem(30);
+    font-size: rem(50);
+    color: #998e78;
+  }
+
+  &__price-old {
+    font-size: rem(30);
+    color: #9c9c9c;
+  }
+
+  &__subtitle {
+    margin-bottom: rem(35);
+    font-weight: 500;
+    font-size: rem(20);
+  }
+
+  &__bottom {
+    display: flex;
+  }
+
+  &__count {
+    margin-right: 1rem;
+    border: 1px solid #afafaf;
+    width: rem(68);
+    height: rem(68);
+    font-size: rem(20);
+    text-align: center;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &__btn {
+    width: rem(268);
+    height: rem(68);
+  }
+}
+
+.sizes-list {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(16);
+    }
+  }
+
+  &__btn {
+    border: 1px solid $black;
+    width: rem(40);
+    height: rem(40);
+    text-transform: uppercase;
+
+    &--select {
+      color: $white;
+      background-color: $black;
+      pointer-events: none;
+    }
+  }
+}
+
+.colors-list {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(16);
+    }
+  }
+
+  &__btn {
+    border: 1px solid $black;
+    border-radius: 50%;
+    width: rem(40);
+    height: rem(40);
+
+    &--gray {
+      background-color: #d4d4d4;
+    }
+
+    &--white {
+      background-color: $white;
+    }
+
+    &--black {
+      background-color: $black;
+    }
+
+    &--pink {
+      background-color: #fd9696;
+    }
+
+    &--select {
+      outline: 2px solid $black;
+      outline-offset: 2px;
+    }
+  }
+}
