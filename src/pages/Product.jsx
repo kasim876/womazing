@@ -27,8 +27,8 @@ const Product = () => {
           product ?
             <ProductContent 
               image={product.img}
-              oldPrice={product.oldPrice && product.oldPrice + '₽'}
-              price={product.price + '₽'} 
+              oldPrice={product.oldPrice}
+              price={product.price} 
             />
             :
             <Spinner />

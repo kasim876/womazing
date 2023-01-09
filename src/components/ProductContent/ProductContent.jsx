@@ -1,12 +1,15 @@
+import {observer} from 'mobx-react-lite';
 import {useEffect, useState} from 'react';
+
+import basket from '../../store/BasketStore';
 
 import './ProductContent.scss';
 
-const ProductContent = ({image, oldPrice, price}) => {
+const ProductContent = observer(({image, oldPrice, price}) => {
   const [count, setCount] = useState(1);
   const [size, setSize] = useState('');
   const [color, setColor] = useState('');
-  
+
   useEffect(() => {
     if (size) {
       const ACTIVE_CLASS = 'sizes-list__btn--select';
@@ -37,12 +40,16 @@ const ProductContent = ({image, oldPrice, price}) => {
     const arrOfCountNumber = count.split('');
     
     if (+arrOfCountNumber[0] === 0) {
-      setCount(
-        arrOfCountNumber
-          .slice(1)
-          .join('')
-      );
+      const countNew = arrOfCountNumber
+        .slice(1)
+        .join('');
+
+      setCount(countNew);
     }
+  };
+
+  const addToBasket = () => {
+    basket.setBasket(+count, size, color, price, price * count);
   };
   
   return (
@@ -51,8 +58,8 @@ const ProductContent = ({image, oldPrice, price}) => {
         <img src={process.env.REACT_APP_API_URL + image} alt="" width={536} height={729} className="product-content__img" />
         <div className="product-content__info">
           <div className="product-content__price-wrap">
-            <span className="product-content__price">{price}</span>
-            <del className="product-content__price-old">{oldPrice}</del>
+            <span className="product-content__price">{price + '₽'}</span>
+            <del className="product-content__price-old">{oldPrice && oldPrice + '₽'}</del>
           </div>
           <div className="product-content__select-wrap">
             <h3 className="product-content__subtitle">Выберите размер</h3>
@@ -133,12 +140,17 @@ const ProductContent = ({image, oldPrice, price}) => {
               onChange={(e) => setCount(e.target.value)}
               onBlur={countValidate}
             />
-            <button className="btn-reset btn-green product-content__btn">Добавить в корзину</button>
+            <button
+              className="btn-reset btn-green product-content__btn"
+              onClick={addToBasket}
+            >
+              Добавить в корзину
+            </button>
           </div>
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default ProductContent;
