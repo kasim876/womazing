@@ -5,7 +5,7 @@ import basket from '../../store/BasketStore';
 
 import './ProductContent.scss';
 
-const ProductContent = observer(({image, oldPrice, price}) => {
+const ProductContent = observer(({product}) => {
   const [count, setCount] = useState(1);
   const [size, setSize] = useState('');
   const [color, setColor] = useState('');
@@ -49,17 +49,17 @@ const ProductContent = observer(({image, oldPrice, price}) => {
   };
 
   const addToBasket = () => {
-    basket.setBasket(+count, size, color, price, price * count);
+    basket.setBasket(product, +count);
   };
   
   return (
     <section className="product-content">
       <div className="container product-content__container">
-        <img src={process.env.REACT_APP_API_URL + image} alt="" width={536} height={729} className="product-content__img" />
+        <img src={process.env.REACT_APP_API_URL + product.img} alt="" width={536} height={729} className="product-content__img" />
         <div className="product-content__info">
           <div className="product-content__price-wrap">
-            <span className="product-content__price">{price + '₽'}</span>
-            <del className="product-content__price-old">{oldPrice && oldPrice + '₽'}</del>
+            <span className="product-content__price">{product.price + '₽'}</span>
+            <del className="product-content__price-old">{product.oldPrice && product.oldPrice + '₽'}</del>
           </div>
           <div className="product-content__select-wrap">
             <h3 className="product-content__subtitle">Выберите размер</h3>

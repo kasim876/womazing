@@ -8,11 +8,11 @@ import Hero from '../components/Hero/Hero';
 import ProductContent from '../components/ProductContent/ProductContent';
 
 const Product = () => {
-  const [product, setProduct] = useState(null);
   const {id} = useParams();
+
+  const [product, setProduct] = useState(null);
   
   useEffect(() => {
-
     fetchOneProduct(id)
       .then((data) => {
         setProduct(data);
@@ -25,10 +25,8 @@ const Product = () => {
         <Hero title={product?.name} />
         {
           product ?
-            <ProductContent 
-              image={product.img}
-              oldPrice={product.oldPrice}
-              price={product.price} 
+            <ProductContent
+              product={product}
             />
             :
             <Spinner />
