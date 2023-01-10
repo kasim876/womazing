@@ -6,14 +6,8 @@ class Basket {
     makeAutoObservable(this);
   };
 
-  setBasket(count, size, color, price, totalPrice) {
-    this._basket.push({
-      count,
-      size,
-      color,
-      price,
-      totalPrice,
-    });
+  setBasket(product, count) {
+    this._basket.push(Object.assign({ count }, product));
   }
 
   get basket() {
