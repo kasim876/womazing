@@ -27,7 +27,7 @@ const Header = observer(() => {
         </div>
         <Link to={BASKET_ROUTE} className="header__basket-wrap" title="Открыть корзину">
           <BasketIcon className="header__basket" />
-          <input type="text" className="input-reset header__basket-count" value={basketStore.products.length} readOnly />
+          <input type="text" className="input-reset header__basket-count" value={basketStore.products.length} tabIndex={-1} readOnly />
         </Link>
       </div>
     </header>
