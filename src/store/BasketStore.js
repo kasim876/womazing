@@ -30,9 +30,7 @@ class Basket {
   deleteProduct(product) {
     const productIndex = this.products.indexOf(product);
 
-    if (productIndex) {
-      this.products.splice(productIndex, 1);
-    }
+    this.products.splice(productIndex, 1);
   };
 }
 
