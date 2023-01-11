@@ -1,8 +1,12 @@
+import {observer} from 'mobx-react-lite';
+
+import basketStore from '../../store/BasketStore';
+
 import BasketList from '../BasketList/BasketList';
 
 import './BasketContent.scss';
 
-const BasketContent = () => {
+const BasketContent = observer(() => {
   return (
     <section className="basket">
       <div className="container">
@@ -16,12 +20,14 @@ const BasketContent = () => {
             </tr>
           </thead>
           <tbody className="basket-table__body">
-            <BasketList />
+            {
+              basketStore.products.length ? <BasketList /> : <h1 align="center">В корзине нет товаров</h1>
+            }
           </tbody>
         </table>
       </div>
     </section>
   );
-};
+});
 
 export default BasketContent;
