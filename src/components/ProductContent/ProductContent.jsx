@@ -1,7 +1,7 @@
 import {observer} from 'mobx-react-lite';
 import {useEffect, useState} from 'react';
 
-import basket from '../../store/BasketStore';
+import basketStore from '../../store/BasketStore';
 
 import './ProductContent.scss';
 
@@ -49,7 +49,20 @@ const ProductContent = observer(({product}) => {
   };
 
   const addToBasket = () => {
-    basket.setBasket(product, +count);
+    if (size && color) {
+      basketStore.addProduct(
+        Object.assign(
+          product,
+          {
+            size,
+            color,
+            count: +count,
+          }
+        )
+      );
+    } else {
+      alert('Выберите цвет и размер');
+    }
   };
   
   return (

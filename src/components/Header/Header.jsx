@@ -3,7 +3,7 @@ import {observer} from 'mobx-react-lite';
 
 import {BASKET_ROUTE} from '../../utils/consts';
 
-import basket from '../../store/BasketStore';
+import basketStore from '../../store/BasketStore';
 
 import {ReactComponent as PhoneIcon} from '../../assets/images/svg/phone.svg';
 import {ReactComponent as BasketIcon} from '../../assets/images/svg/bag.svg';
@@ -27,7 +27,7 @@ const Header = observer(() => {
         </div>
         <Link to={BASKET_ROUTE} className="header__basket-wrap" title="Открыть корзину">
           <BasketIcon className="header__basket" />
-          <input type="text" className="input-reset header__basket-count" value={basket.basket.length} readOnly />
+          <input type="text" className="input-reset header__basket-count" value={basketStore.products.length} readOnly />
         </Link>
       </div>
     </header>
