@@ -1,5 +1,7 @@
 import {makeAutoObservable} from 'mobx';
 
+import validateCount from '../helpers/validateCount';
+
 class Basket {
   constructor() {
     this.products = [];
@@ -10,10 +12,7 @@ class Basket {
     const found = this.products.find(el => id === el.id);
 
     if (found) {
-      count < 0 ?
-        found.count = 1
-        :
-        found.count = count;
+      found.count = validateCount(count);
     }
   };
 
