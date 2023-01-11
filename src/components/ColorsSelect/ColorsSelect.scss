@@ -1,0 +1,47 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.colors {
+  display: flex;
+  align-items: center;
+
+  &__field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $black;
+    border-radius: 50%;
+    width: rem(40);
+    height: rem(40);
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:has(.colors__input:checked) {
+      outline: 2px solid $black;
+      outline-offset: 1px;
+    }
+
+    &.white {
+      background-color: $white;
+    }
+
+    &.black {
+      background-color: $black;
+    }
+
+    &.gray {
+      background-color: #d4d4d4;
+    }
+
+    &.pink {
+      background-color: #fd9696;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+}
