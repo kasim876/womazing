@@ -1,8 +1,12 @@
-import Header from '../components/Header/Header';
+import Hero from '../components/Hero/Hero';
+import BasketContent from '../components/BasketContent/BasketContent';
 
 const Basket = () => {
   return (
-    <Header />
+    <main>
+      <Hero title="Корзина" />
+      <BasketContent />
+    </main>
   );
 };
 
