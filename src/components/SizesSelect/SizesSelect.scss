@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.sizes {
+  display: flex;
+  align-items: center;
+
+  &__field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $black;
+    width: rem(40);
+    height: rem(40);
+    text-transform: uppercase;
+    user-select: none;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:has(.sizes__input:checked) {
+      color: $white;
+      background-color: $black;
+      pointer-events: none;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+}
