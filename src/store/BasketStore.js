@@ -8,6 +8,16 @@ class Basket {
     makeAutoObservable(this);
   };
 
+  totalPrice() {
+    let totalPrice = 0;
+    
+    this.products.forEach(el => {
+      totalPrice += el.price * el.count;
+    });
+
+    return totalPrice;
+  }
+
   updateCount(id, count) {
     const found = this.products.find(el => id === el.id);
 
