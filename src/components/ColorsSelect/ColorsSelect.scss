@@ -6,6 +6,12 @@
   align-items: center;
 
   &__field {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,15 +19,6 @@
     border-radius: 50%;
     width: rem(40);
     height: rem(40);
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-
-    &:has(.colors__input:checked) {
-      outline: 2px solid $black;
-      outline-offset: 1px;
-    }
 
     &.white {
       background-color: $white;
@@ -43,5 +40,10 @@
   &__input {
     position: absolute;
     opacity: 0;
+  }
+
+  &__input:checked ~ &__inner {
+    outline: 2px solid $black;
+    outline-offset: 2px;
   }
 }

@@ -11,6 +11,7 @@ const ColorsSelect = ({setValue}) => {
           className="colors__input"
           onChange={(event) => setValue(event.target.value)}
         />
+        <span className="colors__inner white"></span>
       </label>
       <label className="colors__field black">
         <input
@@ -20,6 +21,7 @@ const ColorsSelect = ({setValue}) => {
           className="colors__input"
           onChange={(event) => setValue(event.target.value)}
         />
+        <span className="colors__inner black"></span>
       </label>
       <label className="colors__field gray">
         <input
@@ -29,6 +31,7 @@ const ColorsSelect = ({setValue}) => {
           className="colors__input"
           onChange={(event) => setValue(event.target.value)}
         />
+        <span className="colors__inner gray"></span>
       </label>
       <label className="colors__field pink">
         <input
@@ -38,6 +41,7 @@ const ColorsSelect = ({setValue}) => {
           className="colors__input"
           onChange={(event) => setValue(event.target.value)}
         />
+        <span className="colors__inner pink"></span>
       </label>
     </div>
   );
