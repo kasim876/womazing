@@ -3,6 +3,28 @@
 
 .basket {
   padding: $section-offset 0;
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price-wrap {
+    display: flex;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #f1eadc;
+  }
+
+  &__price-caption {
+    margin-right: rem(70);
+  }
+
+  &__btn {
+    width: rem(236);
+    height: rem(68);
+  }
 }
 
 .basket-table {

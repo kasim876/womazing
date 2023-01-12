@@ -21,7 +21,19 @@ const BasketContent = observer(() => {
           </thead>
           <tbody className="basket-table__body">
             {
-              basketStore.products.length ? <BasketList /> : <h2 align="center">В корзине нет товаров</h2>
+              basketStore.products.length ? 
+                <>
+                  <BasketList />
+                  <div className="basket__bottom">
+                    <div className="basket__price-wrap">
+                      <h3 className="basket__price-caption">Итого:</h3>
+                      <span className="basket__price">{basketStore.totalPrice() + '₽'}</span>
+                    </div>
+                    <button className="btn-reset btn-green basket__btn">Оформить заказ</button>
+                  </div>
+                </>
+                :
+                <h2 align="center">В корзине нет товаров</h2>
             }
           </tbody>
         </table>
