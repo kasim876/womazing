@@ -21,7 +21,7 @@ const BasketContent = observer(() => {
           </thead>
           <tbody className="basket-table__body">
             {
-              basketStore.products.length ? <BasketList /> : <h1 align="center">В корзине нет товаров</h1>
+              basketStore.products.length ? <BasketList /> : <h2 align="center">В корзине нет товаров</h2>
             }
           </tbody>
         </table>
