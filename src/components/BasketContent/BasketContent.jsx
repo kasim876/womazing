@@ -19,23 +19,23 @@ const BasketContent = observer(() => {
               <th>Всего</th>
             </tr>
           </thead>
-          <tbody className="basket-table__body">
-            {
-              basketStore.products.length ? 
-                <>
+          {
+            basketStore.products.length ? 
+              <>
+                <tbody className="basket-table__body">
                   <BasketList />
-                  <div className="basket__bottom">
-                    <div className="basket__price-wrap">
-                      <h3 className="basket__price-caption">Итого:</h3>
-                      <span className="basket__price">{basketStore.totalPrice() + '₽'}</span>
-                    </div>
-                    <button className="btn-reset btn-green basket__btn">Оформить заказ</button>
+                </tbody>
+                <div className="basket__bottom">
+                  <div className="basket__price-wrap">
+                    <h3 className="basket__price-caption">Итого:</h3>
+                    <span className="basket__price">{basketStore.totalPrice() + '₽'}</span>
                   </div>
-                </>
-                :
-                <h2 align="center">В корзине нет товаров</h2>
-            }
-          </tbody>
+                  <button className="btn-reset btn-green basket__btn">Оформить заказ</button>
+                </div>
+              </>
+              :
+              <h2 align="center" style={{'margin-top': '50px'}}>В корзине нет товаров</h2>
+          }
         </table>
       </div>
     </section>
