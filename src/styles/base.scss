@@ -15,6 +15,10 @@
   color: $black;
 }
 
+.page__main {
+  padding-top: rem(130);
+}
+
 .container {
   margin: 0 auto;
   padding: 0 $container-offset;

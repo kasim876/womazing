@@ -45,7 +45,7 @@ const Shop = observer(() => {
   }, [location.pathname, product.page]);
 
   return (
-    <main>
+    <main className="page__main">
       <Hero title="Магазин" />
       <ShopContent />
     </main>

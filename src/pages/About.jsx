@@ -3,7 +3,7 @@ import AboutContent from '../components/AboutContent/AboutContent';
 
 const About = () => {
   return (
-    <main>
+    <main className="page__main">
       <Hero title="О бренде" />
       <AboutContent />
     </main>

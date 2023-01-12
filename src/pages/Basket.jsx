@@ -3,7 +3,7 @@ import BasketContent from '../components/BasketContent/BasketContent';
 
 const Basket = () => {
   return (
-    <main>
+    <main className="page__main">
       <Hero title="Корзина" />
       <BasketContent />
     </main>

@@ -20,7 +20,7 @@ const Product = () => {
   }, []);
 
   return (
-    <main>
+    <main className="page__main">
       {
         product ? (
           <>
