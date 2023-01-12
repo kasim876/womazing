@@ -11,7 +11,7 @@ const SizesSelect = ({setValue}) => {
           className="sizes__input"
           onChange={(event) => setValue(event.target.value)}
         />
-        <span>s</span>
+        <span className="sizes__inner">s</span>
       </label>
       <label className="sizes__field">
         <input
@@ -21,7 +21,7 @@ const SizesSelect = ({setValue}) => {
           className="sizes__input"
           onChange={(event) => setValue(event.target.value)}
         />
-        <span>m</span>
+        <span className="sizes__inner">m</span>
       </label>
       <label className="sizes__field">
         <input
@@ -31,7 +31,7 @@ const SizesSelect = ({setValue}) => {
           className="sizes__input"
           onChange={(event) => setValue(event.target.value)}
         />
-        <span>l</span>
+        <span className="sizes__inner">l</span>
       </label>
       <label className="sizes__field">
         <input
@@ -41,7 +41,7 @@ const SizesSelect = ({setValue}) => {
           className="sizes__input"
           onChange={(event) => setValue(event.target.value)}
         />
-        <span>xl</span>
+        <span className="sizes__inner">xl</span>
       </label>
     </div>
   );
