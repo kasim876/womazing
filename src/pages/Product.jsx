@@ -26,7 +26,7 @@ const Product = () => {
         {
           product ?
             <ProductContent
-              product={product}
+              currentProduct={product}
             />
             :
             <Spinner />
