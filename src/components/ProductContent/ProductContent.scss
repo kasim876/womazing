@@ -51,17 +51,13 @@
   }
 
   &__count {
+    appearance: textfield;
     margin-right: 1rem;
     border: 1px solid #afafaf;
     width: rem(68);
     height: rem(68);
     font-size: rem(20);
     text-align: center;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-    }
   }
 
   &__btn {
