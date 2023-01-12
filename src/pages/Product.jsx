@@ -3,9 +3,9 @@ import {useParams} from 'react-router-dom';
 
 import {fetchOneProduct} from '../http/productAPI';
 
-import Spinner from '../components/Spinner/Spinner';
 import Hero from '../components/Hero/Hero';
 import ProductContent from '../components/ProductContent/ProductContent';
+import Spinner from '../components/Spinner/Spinner';
 
 const Product = () => {
   const {id} = useParams();
@@ -17,21 +17,20 @@ const Product = () => {
       .then((data) => {
         setProduct(data);
       });
-  }, [id]);
+  }, []);
 
   return (
     <main>
-      <>
-        <Hero title={product?.name} />
-        {
-          product ?
-            <ProductContent
-              currentProduct={product}
-            />
-            :
-            <Spinner />
-        }
-      </>
+      {
+        product ? (
+          <>
+            <Hero title = {product.name} />
+            <ProductContent currentProduct = {product} />
+          </>
+        ) : (
+          <Spinner />
+        )
+      }
     </main>
   );
 };

@@ -8,6 +8,7 @@ import SizesSelect from '../SizesSelect/SizesSelect';
 import ColorsSelect from '../ColorsSelect/ColorsSelect';
 
 import './ProductContent.scss';
+import Spinner from '../Spinner/Spinner';
 
 const addToBasket = (product, size, color, count) => {
   if (size && color && count) {
@@ -31,6 +32,10 @@ const ProductContent = observer(({currentProduct}) => {
   const [color, setColor] = useState('');
   const [count, setCount] = useState(1);
 
+  if (!currentProduct) {
+    return <Spinner />;
+  }
+  
   return (
     <section className="product-content">
       <div className="container product-content__container">
