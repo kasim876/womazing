@@ -1,0 +1,45 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.contacts-content__subtitle {
+  margin-bottom: em(60, 24);
+  font-weight: 500;
+  font-size: rem(24);
+}
+
+.contacts-content__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts-content__input {
+  margin-bottom: rem(35);
+  border: none;
+  border-bottom: 1px solid $black;
+  width: 100%;
+  height: rem(56);
+  max-width: rem(350);
+
+  &:focus {
+    outline: none;
+    border-color: $green;
+  }
+
+  &--big {
+    height: rem(134);
+    resize: none;
+  }
+}
+
+.contacts-content__btn {
+  width: rem(189);
+  height: rem(56);
+}
+
+.contacts-content__alert {
+  display: none;
+  margin-top: rem(60);
+  padding: rem(30) rem(80);
+  background-color: $beige;
+}

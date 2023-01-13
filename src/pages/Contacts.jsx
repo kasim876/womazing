@@ -1,8 +1,12 @@
-import Header from '../components/Header/Header';
+import Hero from '../components/Hero/Hero';
+import ContactsContent from '../components/ContactsContent/ContactsContent';
 
 const Contacts = () => {
   return (
-    <Header />
+    <main className="page__main">
+      <Hero title="Контакты" />
+      <ContactsContent />
+    </main>
   );
 };
 
