@@ -1,5 +1,5 @@
-import Hero from '../components/Hero/Hero';
-import BasketContent from '../components/BasketContent/BasketContent';
+import Hero from '../components/shared/hero/Hero';
+import BasketContent from '../components/shared/basket-content/BasketContent';
 
 const Basket = () => {
   return (

@@ -1,0 +1,8 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(60) rem(30);
+}

@@ -1,0 +1,42 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.root {
+  display: block;
+  padding: rem(50) 0;
+  width: 100%;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  text-align: left;
+  gap: rem(10);
+
+  &:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  margin-right: rem(45);
+}
+
+.img {
+  display: block;
+  margin-right: rem(45);
+  border-radius: rem(10);
+}
+
+.count {
+  border: 1px solid #afafaf;
+  width: rem(47);
+  height: rem(47);
+  font-size: rem(20);
+  text-align: center;
+}

@@ -1,0 +1,14 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.root {
+  padding-top: rem(140);
+  padding-bottom: $section-offset;
+}
+
+.title {
+  margin-bottom: em(25, 55);
+  font-weight: 500;
+  font-size: rem(55);
+  line-height: 110%;
+}

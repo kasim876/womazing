@@ -1,5 +1,5 @@
-import Hero from '../components/Hero/Hero';
-import AboutContent from '../components/AboutContent/AboutContent';
+import Hero from '../components/shared/hero/Hero';
+import AboutContent from '../components/shared/about-content/AboutContent';
 
 const About = () => {
   return (

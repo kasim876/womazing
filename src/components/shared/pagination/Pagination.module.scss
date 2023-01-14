@@ -1,0 +1,31 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(90);
+}
+
+.list {
+  display: flex;
+}
+
+.item {
+  &:not(:last-child) {
+    margin-right: rem(16);
+  }
+}
+
+.btn {
+  border: 1px solid $black;
+  width: rem(40);
+  height: rem(40);
+  color: $black;
+}
+
+.current-btn {
+  color: $white;
+  background-color: $black;
+}

@@ -1,0 +1,75 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.root {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+
+  &--fixed {
+    box-shadow: 0 0 10px rgb(25 25 25 / 10%);
+    background-color: $white;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: rem(50);
+  padding-bottom: rem(50);
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: rem(10);
+  width: rem(28);
+  height: rem(28);
+  fill: $green;
+  transition: fill 0.5s ease, background-color 0.5s ease;
+
+  @include hover {
+    fill: $white;
+    background-color: $green;
+  }
+}
+
+.contacts-icon {
+  width: rem(16);
+  height: rem(16);
+}
+
+.basket-wrap {
+  position: relative;
+  display: block;
+  width: rem(36);
+  height: rem(36);
+}
+
+.basket {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.basket-count {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  border-radius: 50%;
+  width: rem(18);
+  height: rem(18);
+  font-size: rem(12);
+  text-align: center;
+  color: $white;
+  background-color: #998e78;
+  pointer-events: none;
+}

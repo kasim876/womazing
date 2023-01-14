@@ -1,15 +1,15 @@
-import HeroMain from '../components/HeroMain/HeroMain';
-import Products from '../components/Products/Products';
-import Advantages from '../components/Advantages/Advantages';
-import Team from '../components/Team/Team';
+import HeroMain from '../components/shared/hero-main/HeroMain';
+import ProductsSection from '../components/shared/products-section/ProductsSection';
+import ImportantsSection from '../components/shared/importants-section/ImportantsSection';
+import TeamSection from '../components/shared/team-section/TeamSection';
 
 const Home = () => {
   return (
     <main>
       <HeroMain />
-      <Products />
-      <Advantages />
-      <Team />
+      <ProductsSection />
+      <ImportantsSection />
+      <TeamSection />
     </main>
   );
 };

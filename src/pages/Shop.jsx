@@ -7,8 +7,8 @@ import {fetchProducts} from '../http/productAPI';
 
 import product from '../store/ProductStore';
 
-import Hero from '../components/Hero/Hero';
-import ShopContent from '../components/ShopContent/ShopContent';
+import Hero from '../components/shared/hero/Hero';
+import ShopContent from '../components/shared/shop-content/ShopContent';
 
 const Shop = observer(() => {
   const location = useLocation();
@@ -18,7 +18,7 @@ const Shop = observer(() => {
     
     document.documentElement.scrollTo(0, 0);
     product.setLoading(true);
-    product.setCurrentType(document.querySelector('.shop-nav__link--current').dataset.category);
+    product.setCurrentType(document.querySelector('.js-active-link').dataset.category);
 
     fetchProducts(
       {

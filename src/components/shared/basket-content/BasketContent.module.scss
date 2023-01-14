@@ -1,0 +1,46 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.root {
+  padding: $section-offset 0;
+}
+
+.table {
+  display: block;
+}
+
+.table-header {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: rem(30);
+  width: 100%;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  text-align: left;
+  gap: rem(10);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-wrap {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #f1eadc;
+}
+
+.price-caption {
+  margin-right: rem(70);
+}
+
+.btn {
+  width: rem(236);
+  height: rem(68);
+}

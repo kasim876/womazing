@@ -1,0 +1,29 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.root {
+  display: flex;
+  margin-bottom: rem(90);
+}
+
+.item {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-right: rem(10);
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $black;
+  width: 100%;
+  height: rem(60);
+}
+
+.current-link {
+  color: $white;
+  background-color: $black;
+}

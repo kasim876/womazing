@@ -1,0 +1,57 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.root {
+  padding: $section-offset 0;
+}
+
+.title {
+  margin-bottom: em(90, 40);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 850px;
+  transform: translateX(-60px);
+}
+
+.icon {
+  display: block;
+  width: rem(28);
+  height: rem(14);
+  stroke: currentcolor;
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  bottom: rem(60);
+  z-index: 2;
+  display: flex;
+  transform: translateX(-50%);
+}
+
+.descr {
+  max-width: rem(255);
+}
+
+.subtitle {
+  margin-bottom: 1em;
+}
+
+.text {
+  margin-bottom: 1.5em;
+}
+
+.link {
+  color: $green;
+}

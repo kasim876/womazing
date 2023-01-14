@@ -1,5 +1,5 @@
-import Hero from '../components/Hero/Hero';
-import ContactsContent from '../components/ContactsContent/ContactsContent';
+import Hero from '../components/shared/hero/Hero';
+import ContactsContent from '../components/shared/contacts-content/ContcatsContent';
 
 const Contacts = () => {
   return (

@@ -3,9 +3,9 @@ import {useParams} from 'react-router-dom';
 
 import {fetchOneProduct} from '../http/productAPI';
 
-import Hero from '../components/Hero/Hero';
-import ProductContent from '../components/ProductContent/ProductContent';
-import Spinner from '../components/Spinner/Spinner';
+import Hero from '../components/shared/hero/Hero';
+import SelectedProduct from '../components/shared/selected-product/SelectedProduct';
+import Loader from '../components/shared/loader/Loader';
 
 const Product = () => {
   const {id} = useParams();
@@ -24,11 +24,11 @@ const Product = () => {
       {
         product ? (
           <>
-            <Hero title = {product.name} />
-            <ProductContent currentProduct = {product} />
+            <Hero title={product.name} />
+            <SelectedProduct currentProduct={product} />
           </>
         ) : (
-          <Spinner />
+          <Loader />
         )
       }
     </main>

@@ -1,0 +1,26 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.root {
+  padding: $section-offset 0;
+}
+
+.title {
+  margin-bottom: em(90, 40);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(30);
+}
+
+.icon {
+  margin-bottom: rem(40);
+  width: rem(60);
+  height: rem(60);
+}
+
+.subtitle {
+  margin-bottom: 1em;
+}

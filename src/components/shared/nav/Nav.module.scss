@@ -1,0 +1,23 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.list {
+  display: flex;
+}
+
+.item {
+  &:not(:last-child) {
+    margin-right: rem(45);
+  }
+}
+
+.link {
+  position: relative;
+  color: $black;
+}
+
+.current-link {
+  font-weight: 700;
+  color: $green;
+  pointer-events: none;
+}
