@@ -14,6 +14,22 @@
   &:not(:last-child) {
     margin-bottom: rem(50);
   }
+
+  @include resolution(992) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: initial;
+    gap: rem(50);
+  }
+}
+
+.nav {
+  ul {
+    @include tablet {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
 }
 
 .contacts {
@@ -21,32 +37,41 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 1rem;
+
+  @include resolution(992) {
+    align-items: center;
+  }
 }
 
 .copyright {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: rem(10);
+  gap: 1rem;
 
-  &-item {
-    font-size: rem(14);
-    line-height: 140%;
+  @include resolution(992) {
+    align-items: center;
   }
+}
+
+.copyright-item {
+  font-size: rem(14);
+  line-height: 140%;
 }
 
 .categories {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 1rem;
 
   &-item {
     font-size: rem(14);
     line-height: 140%;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 1em;
-    }
+  @include resolution(992) {
+    align-items: center;
   }
 }
 
@@ -54,6 +79,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include resolution(992) {
+    align-items: center;
+  }
 }
 
 .socials {
@@ -65,7 +94,12 @@
   }
 
   &-link {
+    display: block;
     transition: fill 0.5s ease;
+
+    svg {
+      display: block;
+    }
 
     @include hover {
       fill: $white;

@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="container">
         <div className={styles.row}>
           <Logo />
-          <Nav />
+          <Nav className={styles.nav} />
           <div className={styles.contacts}>
             <Phone />
             <a
