@@ -12,7 +12,7 @@ function App() {
   const handleScroll = () => {
     const header = document.querySelector('.js-header');
     
-    if (window.scrollY) {
+    if (window.scrollY > 10) {
       header.style.boxShadow = '0 0 10px rgb(25 25 25 / 10%)';
       header.style.backgroundColor = '#fff';
     } else {
