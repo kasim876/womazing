@@ -4,6 +4,19 @@
 .root {
   padding-top: rem(140);
   padding-bottom: $section-offset;
+
+  @include tablet {
+    padding-top: rem(50);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    align-items: center;
+  }
 }
 
 .title {

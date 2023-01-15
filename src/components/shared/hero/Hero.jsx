@@ -7,7 +7,7 @@ const Hero = ({title}) => {
   
   return (
     <section className={`js-hero ${styles.root}`}>
-      <div className="container">
+      <div className={`container ${styles.container}`}>
         <h1 className={styles.title}>{title}</h1>
         <Breadcrumbs list={breadcrumbsItems} />
       </div>
