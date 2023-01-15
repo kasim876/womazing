@@ -11,6 +11,7 @@ import {ReactComponent as BasketIcon} from '../../../assets/images/svg/bag.svg';
 import Logo from '../../shared/logo/Logo';
 import Phone from '../../shared/phone/Phone';
 import Nav from '../../shared/nav/Nav';
+import Burger from '../../shared/burger/Burger';
 
 import styles from './Header.module.scss';
 
@@ -18,8 +19,9 @@ const Header = observer(() => {
   return (
     <header className={`js-header ${styles.root}`}>
       <div className={`container ${styles.container}`}>
+        <Burger />
         <Logo />
-        <Nav />
+        <Nav className={styles.nav} />
         <div className={styles.contacts}>
           <button className={`btn-reset ${styles['contacts-btn']}`} aria-label="Заказать обратный звонок">
             <PhoneIcon className={styles['contacts-icon']} />
