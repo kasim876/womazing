@@ -14,8 +14,9 @@
   display: flex;
   flex-direction: column;
 
-  @include tablet {
+  @include resolution(992) {
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -24,4 +25,8 @@
   font-weight: 500;
   font-size: rem(55);
   line-height: 110%;
+
+  @include tablet {
+    font-size: rem(40);
+  }
 }
