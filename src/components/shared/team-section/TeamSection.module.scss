@@ -12,6 +12,12 @@
 .wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: initial;
+  }
 }
 
 .slider-wrapper {
@@ -22,6 +28,26 @@
   width: 100%;
   max-width: 850px;
   transform: translateX(-60px);
+
+  @include resolution(1260) {
+    max-width: fit-content;
+    transform: none;
+  }
+
+  @include laptop {
+    max-width: 450px;
+  }
+
+  @include tablet {
+    margin-bottom: rem(30);
+    max-width: fit-content;
+  }
+}
+
+.btn {
+  @include resolution(1260) {
+    display: none;
+  }
 }
 
 .icon {
@@ -38,10 +64,21 @@
   z-index: 2;
   display: flex;
   transform: translateX(-50%);
+
+  @include tablet {
+    bottom: rem(30);
+  }
 }
 
 .descr {
+  display: flex;
+  flex-direction: column;
   max-width: rem(255);
+
+  @include tablet {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .subtitle {

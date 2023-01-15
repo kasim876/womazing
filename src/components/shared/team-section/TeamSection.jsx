@@ -17,11 +17,11 @@ const TeamSection = () => {
         <h2 className={`title ${styles.title}`}>Команда мечты Womazing</h2>
         <div className={styles.wrapper}>
           <div className={styles['slider-wrapper']}>
-            <button className={`btn-reset js-team-btn-prev ${styles.btn} ${styles['btn-prev']}`}>
+            <button className={`btn-reset js-team-btn-prev ${styles.btn}`}>
               <PrevArrow className={styles.icon} />
             </button>
             <TeamSlider />
-            <button className={`btn-reset js-team-btn-next ${styles.btn} ${styles['btn-next']}`}>
+            <button className={`btn-reset js-team-btn-next ${styles.btn}`}>
               <NextArrow className={styles.icon} />
             </button>
             <div className={`js-team-pagination ${styles.pagination}`}></div>
