@@ -15,7 +15,7 @@ const AboutContent = () => {
           <li className={styles.item}>
             <img src={image1} alt="" width={442} height={457} className={styles.img} />
             <article className={styles.article}>
-              <h3 className="subtitle about-content__subtitle">Идея и женщина</h3>
+              <h3 className={`subtitle ${styles.subtitle}`}>Идея и женщина</h3>
               <p className={`text-md ${styles.text}`}>
                 Womazing была основана в 2010-ом и стала одной из самых успешных компаний нашей страны. Как и многие итальянские фирмы, Womazing остаётся семейной компанией, хотя ни один из членов семьи не является модельером.
               </p>
