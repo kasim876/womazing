@@ -11,14 +11,33 @@
 
 .list {
   display: grid;
+  column-gap: rem(30);
   grid-template-columns: repeat(3, 1fr);
-  gap: rem(30);
+  row-gap: rem(60);
+
+  @include tablet {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .icon {
   margin-bottom: rem(40);
   width: rem(60);
   height: rem(60);
+
+  @include tablet {
+    margin-bottom: 1rem;
+  }
 }
 
 .subtitle {
