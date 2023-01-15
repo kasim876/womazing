@@ -1,20 +1,49 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
 
+.root {
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+
+  @include laptop {
+    align-items: center;
+  }
+}
+
 .title {
   margin-bottom: em(45, 55);
+  width: 100%;
   max-width: rem(585);
   font-weight: 500;
   font-size: rem(55);
   line-height: 110%;
-  letter-spacing: 0.02em;
+
+  @include laptop {
+    text-align: center;
+  }
+
+  @include tablet {
+    font-size: rem(36);
+  }
 }
 
 .descr {
   margin-bottom: em(50, 20);
+  width: 100%;
   max-width: rem(385);
   font-size: rem(20);
   line-height: 120%;
-  letter-spacing: 0.02em;
   text-align: right;
+
+  @include laptop {
+    text-align: center;
+  }
+
+  @include tablet {
+    font-size: rem(16);
+  }
 }
