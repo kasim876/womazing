@@ -4,11 +4,11 @@ import {HOME_ROUTE, ABOUT_ROUTE, CONTACTS_ROUTE, SHOP_ROUTE} from '../../../util
 
 import styles from './Nav.module.scss';
 
-const Nav = () => {
+const Nav = ({className}) => {
   const ACTIVE_CLASS_NAME = styles['current-link'];
 
   return (
-    <nav className={styles.root}>
+    <nav className={className || undefined}>
       <ul className={styles.list}>
         <li className={styles.item}>
           <NavLink
