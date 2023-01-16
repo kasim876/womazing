@@ -18,26 +18,27 @@
 }
 
 .input:checked ~ .inner {
-  outline: 2px solid $black;
-  outline-offset: 2px;
+  border-color: $black;
 }
 
 .inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid $black;
+  border: 2px solid transparent;
   border-radius: 50%;
   width: rem(40);
   height: rem(40);
+  transition: border-color 0.5s ease;
+  cursor: pointer;
 }
 
-.white {
-  background-color: $white;
+.brown {
+  background-color: #927876;
 }
 
-.black {
-  background-color: $black;
+.yellow {
+  background-color: #fdc796;
 }
 
 .gray {

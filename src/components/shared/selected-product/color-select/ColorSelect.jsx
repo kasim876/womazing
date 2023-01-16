@@ -7,21 +7,11 @@ const ColorSelect = ({setValue}) => {
         <input
           type="radio"
           name="color"
-          value="white"
+          value="brown"
           className={styles.input}
           onChange={(event) => setValue(event.target.value)}
         />
-        <span className={`${styles.inner} ${styles.white}`}></span>
-      </label>
-      <label className={styles.field}>
-        <input
-          type="radio"
-          name="color"
-          value="black"
-          className={styles.input}
-          onChange={(event) => setValue(event.target.value)}
-        />
-        <span className={`${styles.inner} ${styles.black}`}></span>
+        <span className={`${styles.inner} ${styles.brown}`}></span>
       </label>
       <label className={styles.field}>
         <input
@@ -32,6 +22,16 @@ const ColorSelect = ({setValue}) => {
           onChange={(event) => setValue(event.target.value)}
         />
         <span className={`${styles.inner} ${styles.gray}`}></span>
+      </label>
+      <label className={styles.field}>
+        <input
+          type="radio"
+          name="color"
+          value="yellow"
+          className={styles.input}
+          onChange={(event) => setValue(event.target.value)}
+        />
+        <span className={`${styles.inner} ${styles.yellow}`}></span>
       </label>
       <label className={styles.field}>
         <input
