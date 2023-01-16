@@ -41,11 +41,13 @@ const SelectedProduct = observer(({currentProduct}) => {
     currentProduct ? (
       <section className={styles.root}>
         <div className={`container ${styles.container}`}>
-          <img src={process.env.REACT_APP_API_URL + currentProduct.img} alt="" width={536} height={729} className={styles.img} />
+          <img src={process.env.REACT_APP_API_URL + currentProduct.img} alt="" width={536} className={styles.img} />
           <div className={styles.info}>
             <div className={styles['price-wrap']}>
               <span className={styles.price}>{currentProduct.price + '₽'}</span>
-              <del className={styles['price-old']}>{currentProduct.oldPrice && currentProduct.oldPrice + '₽'}</del>
+              {
+                currentProduct.oldPrice && <del className={styles['price-old']}>{currentProduct.oldPrice + '₽'}</del>
+              }
             </div>
             <div className={styles['select-wrap']}>
               <h3 className={styles['select-title']}>Выберите размер</h3>
