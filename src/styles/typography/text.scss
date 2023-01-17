@@ -3,6 +3,10 @@
   font-size: 1rem;
   line-height: 120%;
 
+  @include laptop {
+    font-size: rem(14);
+  }
+
   @include tablet {
     font-size: rem(12);
   }
