@@ -9,28 +9,60 @@
 
 .item {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 4fr 1fr 2fr 1fr;
   text-align: left;
-  gap: rem(10);
+  gap: rem(15);
 
   &:not(:last-child) {
     margin-bottom: rem(30);
   }
+
+  @include tablet {
+    grid-template-columns: 3fr 2fr 1fr;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 140%;
 }
 
 .cell {
   display: flex;
   align-items: center;
+
+  @include tablet {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
 
 .btn {
-  margin-right: rem(45);
+  margin-right: rem(15);
+
+  @include mobile {
+    margin-right: 0;
+    margin-bottom: rem(15);
+  }
 }
 
 .img {
   display: block;
-  margin-right: rem(45);
+  margin-right: rem(15);
   border-radius: rem(10);
+
+  @include mobile {
+    margin-right: 0;
+    margin-bottom: rem(15);
+  }
 }
 
 .count {

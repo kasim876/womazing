@@ -26,10 +26,10 @@ const BasketList = observer(() => {
                 height={179}
                 className={styles.img}
               />
-              <span className="text-md">{product.name}</span>
+              <span className={styles.text}>{product.name}</span>
             </td>
             <td className={styles.cell}>
-              <span className="text-md">{product.price + '₽'}</span>
+              <span className={styles.text}>{product.price + '₽'}</span>
             </td>
             <td className={styles.cell}>
               <input
@@ -39,7 +39,7 @@ const BasketList = observer(() => {
               />
             </td>
             <td className={styles.cell}>
-              <span className="text-md">{product.price * product.count + '₽'}</span>
+              <span className={styles.text}>{product.price * product.count + '₽'}</span>
             </td>
           </tr>
         ))
