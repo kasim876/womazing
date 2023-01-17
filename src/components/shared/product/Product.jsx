@@ -10,8 +10,13 @@ const Product = ({route, image, name, oldPrice, price}) => {
       <div className={styles['img-wrap']}>
         <img src={image} alt="" width="350" height="478" className={styles.img} />
       </div>
-      <h3 className={styles.name}>{name}</h3>
-      <span className={`text-md ${styles.price}`}>{oldPrice}{price}</span>
+      <h3 className={`text-md ${styles.name}`}>{name}</h3>
+      <div className={styles['price-wrap']}>
+        <span className={`text-md ${styles.price}`}>{price}</span>
+        {
+          oldPrice ? <del className={styles['price-old']}>{oldPrice}</del> : ''
+        }
+      </div>
     </Link>
   );
 };
