@@ -21,4 +21,8 @@ export default [
     link: SHOP_ROUTE + '/hoody',
     name: 'Толстовки',
   },
+  {
+    link: SHOP_ROUTE + '/coat',
+    name: 'Пальто',
+  },
 ];

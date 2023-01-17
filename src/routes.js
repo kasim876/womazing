@@ -35,6 +35,10 @@ export const ROUTES = [
     element: <Shop />,
   },
   {
+    path: SHOP_ROUTE + '/coat',
+    element: <Shop />,
+  },
+  {
     path: ABOUT_ROUTE,
     element: <About />,
   },
