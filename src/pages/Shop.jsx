@@ -12,7 +12,7 @@ import ShopContent from '../components/shared/shop-content/ShopContent';
 
 const Shop = observer(() => {
   const location = useLocation();
-
+  
   useEffect(() => {
     const source = axios.CancelToken.source();
     
@@ -41,7 +41,6 @@ const Shop = observer(() => {
       });
 
     return () => source.cancel();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname, product.page]);
 
   return (
