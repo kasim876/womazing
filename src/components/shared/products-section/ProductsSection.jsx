@@ -1,51 +1,78 @@
+import axios from 'axios';
+import {useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {observer} from 'mobx-react-lite';
 
 import {PRODUCT_ROUTE, SHOP_ROUTE} from '../../../utils/consts';
 
-import productImage1 from '../../../assets/images/productImage1.jpg';
-import productImage2 from '../../../assets/images/productImage2.jpg';
-import productImage3 from '../../../assets/images/productImage3.jpg';
+import ProductStore from '../../../store/ProductStore';
+
+import {fetchProducts} from '../../../http/productAPI';
 
 import Product from '../product/Product';
+import Loader from '../loader/Loader';
 
 import styles from './ProductsSection.module.scss';
 
-const ProductsSection = () => {
+const ProductsSection = observer(() => {
+
+  useEffect(() => {
+    const source = axios.CancelToken.source();
+
+    ProductStore.setLoading(true);
+    ProductStore.setCurrentType('Все');
+
+
+    fetchProducts(
+      {
+        category: ProductStore.currentType,
+        limit: 4,
+      },
+      source.token
+    )
+      .then(data => {
+        ProductStore.setProducts(data.rows);
+      })
+      .then(() => {
+        ProductStore.setLoading(false);
+      })
+      .catch(function(error) {
+        if (axios.isCancel(error)) {
+          return;
+        }
+      });
+
+    return () => source.cancel();
+  }, []);
+
+  const products = ProductStore.products.map(({id, img, name, oldPrice, price}) => (
+    <li key={name} className={styles.item}>
+      <Product
+        route={PRODUCT_ROUTE + '/' + id}
+        image={process.env.REACT_APP_API_URL + img}
+        name={name}
+        oldPrice={oldPrice && oldPrice + '₽'}
+        price={price + '₽'}
+      />
+    </li>
+  ));
+  
   return (
     <section className={styles.root} id="products">
       <div className="container">
         <h2 className={`title ${styles.title}`}>Новая коллекция</h2>
-        <ul className={styles.list}>
-          <li className={styles.item}>
-            <Product
-              route={PRODUCT_ROUTE + '/1'}
-              image={productImage1}
-              name="Футболка USA"
-              oldPrice="229₽"
-              price="129₽"
-            />
-          </li>
-          <li className={styles.item}>
-            <Product
-              route={PRODUCT_ROUTE + '/9'}
-              image={productImage2}
-              name="Купальник Glow"
-              price="1549₽"
-            />
-          </li>
-          <li className={styles.item}>
-            <Product
-              route={PRODUCT_ROUTE + '/12'}
-              image={productImage3}
-              name="Свитшот Sweet Shot"
-              price="999₽"
-            />
-          </li>
-        </ul>
+        {
+          ProductStore.loading ?
+            <Loader />
+            :
+            <ul className={styles.list}>
+              {products}
+            </ul>
+        }
         <Link to={SHOP_ROUTE} className={`btn-reset ${styles.btn}`}>Открыть магазин</Link>
       </div>
     </section>
   );
-};
+});
 
 export default ProductsSection;
