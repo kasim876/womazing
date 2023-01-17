@@ -2,15 +2,16 @@
 @import "../../../../styles/vars";
 
 .root {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: rem(60) rem(30);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 rem(-10) rem(-20);
+}
 
-  @include resolution(1200) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.item {
+  margin: 0 rem(10) rem(20);
+  width: calc(100% / 12 * 3 - 20px);
 
   @include tablet {
-    grid-template-columns: repeat(1, 1fr);
+    width: calc(100% / 12 * 6 - 20px);
   }
 }
