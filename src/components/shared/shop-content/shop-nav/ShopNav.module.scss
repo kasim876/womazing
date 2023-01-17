@@ -4,14 +4,21 @@
 .root {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: rem(90);
-  gap: rem(10);
+  margin: 0 rem(-10);
+  margin-bottom: rem(80);
 }
 
 .item {
-  width: 100%;
-  max-width: rem(320);
+  margin: 0 rem(10) rem(10);
+  width: calc(100% / 12 * 2 - 20px);
+
+  @include laptop {
+    width: calc(100% / 12 * 4 - 20px);
+  }
+
+  @include mobile {
+    width: calc(100% / 12 * 6 - 20px);
+  }
 }
 
 .link {
@@ -19,8 +26,6 @@
   align-items: center;
   justify-content: center;
   border: 1px solid $black;
-  padding-right: rem(30);
-  padding-left: rem(30);
   width: 100%;
   height: rem(60);
 }
