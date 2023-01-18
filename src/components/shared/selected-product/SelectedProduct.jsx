@@ -6,6 +6,8 @@ import BasketStore from '../../../store/BasketStore';
 
 import Loader from '../loader/Loader';
 
+import GreenButton from '../../ui/green-button/GreenButton';
+
 import SizeSelect from './size-select/SizeSelect';
 import ColorSelect from './color-select/ColorSelect';
 
@@ -19,7 +21,7 @@ const addToBasket = (product, size, color, count) => {
         {
           size,
           color,
-          count: +count,
+          count,
         }
       )
     );
@@ -63,12 +65,12 @@ const SelectedProduct = observer(({currentProduct}) => {
                 value={count}
                 onChange={(e) => setCount(validateCount(e.target.value))}
               />
-              <button
-                className={`btn-reset btn-green ${styles.btn}`}
+              <GreenButton
+                className={styles.btn}
                 onClick={() => addToBasket(currentProduct, size, color, count)}
               >
                 Добавить в корзину
-              </button>
+              </GreenButton>
             </div>
           </div>
         </div>

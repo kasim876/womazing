@@ -1,6 +1,11 @@
 import {observer} from 'mobx-react-lite';
+import {Link} from 'react-router-dom';
+
+import {BOOKING_ROUTE} from '../../../utils/consts';
 
 import BasketStore from '../../../store/BasketStore';
+
+import GreenButton from '../../ui/green-button/GreenButton';
 
 import BasketList from './basket-list/BasketList';
 
@@ -29,7 +34,9 @@ const BasketContent = observer(() => {
                   <h3 className={styles['price-caption']}>Итого:</h3>
                   <span className={styles.price}>{BasketStore.totalPrice() + '₽'}</span>
                 </div>
-                <button className={`btn-reset btn-green ${styles.btn}`}>Оформить заказ</button>
+                <Link to={BOOKING_ROUTE} className={styles.link}>
+                  <GreenButton>Оформить заказ</GreenButton>
+                </Link>
               </div>
             </>
             :

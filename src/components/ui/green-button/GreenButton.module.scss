@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0;
+  padding: rem(5) rem(15);
+  width: 100%;
+  height: 100%;
+  color: $white;
+  background-color: $green;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+
+  @include hover {
+    background-color: #509498;
+  }
+}

@@ -8,6 +8,8 @@ import mainImage from '../../../assets/images/hero-image1.jpg';
 import secondImage from '../../../assets/images/hero-image2.jpg';
 import thirdImage from '../../../assets/images/hero-image3.jpg';
 
+import GreenButton from '../../ui/green-button/GreenButton';
+
 import HeroSlider from './hero-slider/HeroSlider';
 
 import styles from './HeroMain.module.scss';
@@ -34,7 +36,9 @@ const HeroMain = () => {
             <a href="#products" className={styles['next-section-link']} onClick={scrollToSection}>
               <Arrow />
             </a>
-            <Link to={SHOP_ROUTE} className={styles['shop-link']}>Открыть магазин</Link>
+            <Link to={SHOP_ROUTE} className={styles['shop-link']}>
+              <GreenButton>Открыть магазин</GreenButton>
+            </Link>
           </div>
           <div className={`js-hero-pagination ${styles.pagination}`}></div>
         </div>

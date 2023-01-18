@@ -1,5 +1,7 @@
 import {useState} from 'react';
 
+import GreenButton from '../../../ui/green-button/GreenButton';
+
 import styles from './ContactsForm.module.scss';
 
 const formSubmit = (e, setMessage) => {
@@ -53,12 +55,12 @@ const ContactsForm = () => {
         required
         className={`text-md ${styles.input} ${styles['big-input']}`}
       ></textarea>
-      <button
-        className={`btn-reset btn-green ${styles.btn}`}
+      <GreenButton
+        className={styles.btn}
         onClick={(e) => formSubmit(e, setMessage)}
       >
         Отправить
-      </button>
+      </GreenButton>
       <p className={`text-md js-alert ${styles.alert}`}>Сообщение успешно отправлено</p>
     </form>
   );

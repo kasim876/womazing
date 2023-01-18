@@ -5,6 +5,8 @@ import {SHOP_ROUTE} from '../../../utils/consts';
 import image1 from '../../../assets/images/about_image_1.jpg';
 import image2 from '../../../assets/images/about_image_2.jpg';
 
+import GreenButton from '../../ui/green-button/GreenButton';
+
 import styles from './AboutContent.module.scss';
 
 const AboutContent = () => {
@@ -37,7 +39,11 @@ const AboutContent = () => {
             </article>
           </li>
         </ul>
-        <Link to={SHOP_ROUTE} className={`btn-reset btn-green ${styles.btn}`}>Перейти в магазин</Link>
+        <Link to={SHOP_ROUTE} className={styles.link}>
+          <GreenButton>
+            Перейти в магазин
+          </GreenButton>
+        </Link>
       </div>
     </section>
   );
