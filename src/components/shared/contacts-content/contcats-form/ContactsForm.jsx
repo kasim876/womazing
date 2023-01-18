@@ -17,13 +17,13 @@ const ContactsForm = () => {
   
   return (
     <form className={styles.root}>
-      <h3 className={styles.title}>Напишите нам</h3>
+      <h3 className={`subtitle ${styles.subtitle}`}>Напишите нам</h3>
       <input
         type="text"
         placeholder="Имя"
         name="name"
         value={name}
-        className={styles.input}
+        className={`text-md ${styles.input}`}
         onChange={(e) => setName(e.target.value)}
         required
       />
@@ -32,7 +32,7 @@ const ContactsForm = () => {
         placeholder="E-mail"
         name="email"
         value={email}
-        className={styles.input}
+        className={`text-md ${styles.input}`}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
@@ -41,7 +41,7 @@ const ContactsForm = () => {
         placeholder="Телефон"
         name="tel"
         value={phone}
-        className={styles.input}
+        className={`text-md ${styles.input}`}
         onChange={(e) => setPhone(e.target.value)}
         required
       />
@@ -51,7 +51,7 @@ const ContactsForm = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         required
-        className={`${styles.input} ${styles['big-input']}`}
+        className={`text-md ${styles.input} ${styles['big-input']}`}
       ></textarea>
       <button
         className={`btn-reset btn-green ${styles.btn}`}

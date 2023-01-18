@@ -5,6 +5,10 @@
   display: flex;
   align-items: center;
   margin: rem(120) 0;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .item {
@@ -15,10 +19,25 @@
   &:not(:last-child) {
     margin-right: rem(90);
   }
+
+  @include resolution(960) {
+    &:not(:last-child) {
+      margin-right: rem(30);
+    }
+  }
+
+  @include tablet {
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: rem(30);
+    }
+  }
 }
 
 .caption {
-  margin-bottom: rem(20);
+  margin-bottom: rem(15);
 }
 
 .value {
@@ -26,4 +45,12 @@
   font-style: normal;
   font-size: rem(20);
   line-height: 140%;
+
+  @include resolution(960) {
+    font-size: rem(18);
+  }
+
+  @include tablet {
+    font-size: rem(16);
+  }
 }

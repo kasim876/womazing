@@ -5,12 +5,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @include tablet {
+    align-items: center;
+  }
 }
 
 .subtitle {
   margin-bottom: em(60, 24);
-  font-weight: 500;
-  font-size: rem(24);
 }
 
 .input {
@@ -18,7 +20,7 @@
   border: none;
   border-bottom: 1px solid $black;
   width: 100%;
-  height: rem(56);
+  height: rem(40);
   max-width: rem(350);
 
   &:focus {
