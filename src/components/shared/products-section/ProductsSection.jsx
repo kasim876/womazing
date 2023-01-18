@@ -9,6 +9,8 @@ import ProductStore from '../../../store/ProductStore';
 
 import {fetchProducts} from '../../../http/productAPI';
 
+import OutlinedButton from '../../ui/button/outlined-button/OutlinedButton';
+
 import Product from '../product/Product';
 import Loader from '../loader/Loader';
 
@@ -69,7 +71,11 @@ const ProductsSection = observer(() => {
               {products}
             </ul>
         }
-        <Link to={SHOP_ROUTE} className={`btn-reset ${styles.btn}`}>Открыть магазин</Link>
+        <Link to={SHOP_ROUTE} className={styles.link}>
+          <OutlinedButton>
+            Открыть магазин
+          </OutlinedButton>
+        </Link>
       </div>
     </section>
   );

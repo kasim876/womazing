@@ -24,20 +24,9 @@
   }
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: rem(65) auto 0;
-  border: 1px solid $green;
-  width: rem(243);
+.link {
+  display: block;
+  margin: rem(60) auto 0;
   height: rem(68);
-  color: $green;
-  background-color: $white;
-  transition: color 0.5s ease, background-color 0.5s ease;
-
-  @include hover {
-    color: $white;
-    background-color: $green;
-  }
+  max-width: rem(243);
 }
