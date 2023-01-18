@@ -1,6 +1,6 @@
 const validateCount = (count) => {
   if (isNaN(+count)) {
-    return '';
+    return 0;
   } else if (count < 0) {
     return 1;
   } else {

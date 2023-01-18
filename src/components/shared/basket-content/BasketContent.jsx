@@ -5,7 +5,7 @@ import {BOOKING_ROUTE} from '../../../utils/consts';
 
 import BasketStore from '../../../store/BasketStore';
 
-import GreenButton from '../../ui/green-button/GreenButton';
+import GreenButton from '../../ui/button/green-button/GreenButton';
 
 import BasketList from './basket-list/BasketList';
 

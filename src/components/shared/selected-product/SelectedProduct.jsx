@@ -6,7 +6,7 @@ import BasketStore from '../../../store/BasketStore';
 
 import Loader from '../loader/Loader';
 
-import GreenButton from '../../ui/green-button/GreenButton';
+import GreenButton from '../../ui/button/green-button/GreenButton';
 
 import SizeSelect from './size-select/SizeSelect';
 import ColorSelect from './color-select/ColorSelect';

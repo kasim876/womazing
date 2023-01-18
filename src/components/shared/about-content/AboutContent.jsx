@@ -5,7 +5,7 @@ import {SHOP_ROUTE} from '../../../utils/consts';
 import image1 from '../../../assets/images/about_image_1.jpg';
 import image2 from '../../../assets/images/about_image_2.jpg';
 
-import GreenButton from '../../ui/green-button/GreenButton';
+import GreenButton from '../../ui/button/green-button/GreenButton';
 
 import styles from './AboutContent.module.scss';
 

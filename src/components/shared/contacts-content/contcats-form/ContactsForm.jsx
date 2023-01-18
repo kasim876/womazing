@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import GreenButton from '../../../ui/green-button/GreenButton';
+import GreenButton from '../../../ui/button/green-button/GreenButton';
 
 import styles from './ContactsForm.module.scss';
 
