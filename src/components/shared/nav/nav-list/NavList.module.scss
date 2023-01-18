@@ -1,9 +1,9 @@
-@import "../../../styles/mixins";
-@import "../../../styles/vars";
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
 
-.list {
-  display: flex;
-  align-items: center;
+.root {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   gap: rem(45);
 }
 

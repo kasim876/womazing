@@ -9,6 +9,7 @@ import paymentImg from '../../../assets/images/visa-mastercard.png';
 
 import Logo from '../../shared/logo/Logo';
 import Nav from '../../shared/nav/Nav';
+import NavList from '../../shared/nav/nav-list/NavList';
 import Phone from '../../shared/phone/Phone';
 
 import styles from './Footer.module.scss';
@@ -19,7 +20,9 @@ const Footer = () => {
       <div className="container">
         <div className={styles.row}>
           <Logo />
-          <Nav className={styles.nav} />
+          <Nav>
+            <NavList className={styles['nav-list']} />
+          </Nav>
           <div className={styles.contacts}>
             <Phone />
             <a

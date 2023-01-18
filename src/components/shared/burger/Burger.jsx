@@ -1,16 +1,17 @@
 import Nav from '../nav/Nav';
+import NavList from '../nav/nav-list/NavList';
 import Phone from '../phone/Phone';
 
 import styles from './Burger.module.scss';
 
 function clickHandle() {
-  const BLACKOUNT_ACTIVE_CLASS = styles['blackout-active'];
+  const BLACKOUT_ACTIVE_CLASS = styles['blackout-active'];
   const MENU_ACTIVE_CLASS = styles['menu-active'];
   
   const BLACKOUT_NODE = document.querySelector('.js-burger-blackout');
   const MENU_NODE = document.querySelector('.js-burger-menu');
 
-  BLACKOUT_NODE.classList.toggle(BLACKOUNT_ACTIVE_CLASS);
+  BLACKOUT_NODE.classList.toggle(BLACKOUT_ACTIVE_CLASS);
   MENU_NODE.classList.toggle(MENU_ACTIVE_CLASS);
 }
 
@@ -23,7 +24,9 @@ const Burger = () => {
         <span className={styles['btn-line']}></span>
       </button>
       <div className={`js-burger-menu ${styles.menu}`}>
-        <Nav className={`${styles.nav}`} />
+        <Nav>
+          <NavList className={styles['nav-list']} />
+        </Nav>
         <Phone />
       </div>
       <div className={`js-burger-blackout ${styles.blackout}`} onClick={clickHandle}></div>

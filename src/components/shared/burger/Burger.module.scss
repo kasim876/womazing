@@ -29,9 +29,8 @@
   background-color: $green;
 }
 
-.nav ul {
-  flex-direction: column;
-  align-items: flex-start;
+.nav-list {
+  grid-template-columns: repeat(1, auto);
 }
 
 .menu {
