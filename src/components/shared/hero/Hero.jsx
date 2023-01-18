@@ -2,8 +2,8 @@ import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
 
 import styles from './Hero.module.scss';
 
-const Hero = ({title}) => {
-  const breadcrumbsItems = ['Главная', title];
+const Hero = ({title, breadcrumbs}) => {
+  const breadcrumbsItems = ['Главная', ...breadcrumbs];
   
   return (
     <section className={`js-hero ${styles.root}`}>

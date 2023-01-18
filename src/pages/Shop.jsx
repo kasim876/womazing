@@ -45,7 +45,7 @@ const Shop = observer(() => {
 
   return (
     <main className="page__main">
-      <Hero title="Магазин" />
+      <Hero title="Магазин" breadcrumbs={['Магазин']} />
       <ShopContent />
     </main>
   );

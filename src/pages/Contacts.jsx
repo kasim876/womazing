@@ -4,7 +4,7 @@ import ContactsContent from '../components/shared/contacts-content/ContcatsConte
 const Contacts = () => {
   return (
     <main className="page__main">
-      <Hero title="Контакты" />
+      <Hero title="Контакты" breadcrumbs={['Контакты']} />
       <ContactsContent />
     </main>
   );

@@ -24,7 +24,7 @@ const Product = () => {
       {
         product ? (
           <>
-            <Hero title={product.name} />
+            <Hero title={product.name} breadcrumbs={[product.category, product.name]} />
             <SelectedProduct currentProduct={product} />
           </>
         ) : (

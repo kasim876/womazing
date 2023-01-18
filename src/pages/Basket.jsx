@@ -4,7 +4,7 @@ import BasketContent from '../components/shared/basket-content/BasketContent';
 const Basket = () => {
   return (
     <main className="page__main">
-      <Hero title="Корзина" />
+      <Hero title="Корзина" breadcrumbs={['Корзина']} />
       <BasketContent />
     </main>
   );

@@ -4,7 +4,7 @@ import AboutContent from '../components/shared/about-content/AboutContent';
 const About = () => {
   return (
     <main className="page__main">
-      <Hero title="О бренде" />
+      <Hero title="О бренде" breadcrumbs={['О бренде']} />
       <AboutContent />
     </main>
   );
