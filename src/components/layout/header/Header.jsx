@@ -21,7 +21,7 @@ const Header = observer(() => {
     <header className={`js-header ${styles.root}`}>
       <div className={`container ${styles.container}`}>
         <Burger />
-        <Logo />
+        <Logo className={styles.logo} />
         <Nav className={styles.nav}>
           <NavList />
         </Nav>
@@ -29,7 +29,7 @@ const Header = observer(() => {
           <button className={`btn-reset ${styles['contacts-btn']}`} aria-label="Заказать обратный звонок">
             <PhoneIcon className={styles['contacts-icon']} />
           </button>
-          <Phone />
+          <Phone className={styles['contacts-link']} />
         </div>
         <Link to={BASKET_ROUTE} className={styles['basket-wrap']} title="Открыть корзину">
           <BasketIcon className={styles.basket} />

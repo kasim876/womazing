@@ -4,7 +4,7 @@
 .root {
   display: none;
 
-  @include tablet {
+  @include laptop {
     display: block;
   }
 }
@@ -18,8 +18,8 @@
   border: 1px solid $green;
   border-radius: rem(6);
   padding: rem(8) rem(5);
-  width: rem(36);
-  height: rem(36);
+  width: rem(30);
+  height: rem(30);
 }
 
 .btn-line {

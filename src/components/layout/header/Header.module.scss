@@ -20,8 +20,14 @@
   }
 }
 
+.logo {
+  @include mobile {
+    max-width: rem(125);
+  }
+}
+
 .nav {
-  @include tablet {
+  @include laptop {
     display: none;
   }
 }
@@ -29,10 +35,6 @@
 .contacts {
   display: flex;
   align-items: center;
-
-  @include resolution(992) {
-    display: none;
-  }
 }
 
 .contacts-btn {
@@ -54,6 +56,12 @@
 .contacts-icon {
   width: rem(16);
   height: rem(16);
+}
+
+.contacts-link {
+  @include mobile {
+    display: none;
+  }
 }
 
 .basket-wrap {
