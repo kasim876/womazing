@@ -17,28 +17,17 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.root}>
-      <div className="container">
-        <div className={styles.row}>
+      <div className={`container ${styles.container}`}>
+        <div className={styles.col}>
           <Logo />
-          <Nav>
-            <NavList className={styles['nav-list']} />
-          </Nav>
-          <div className={styles.contacts}>
-            <Phone />
-            <a
-              href="mailto:hello@womazing.com"
-              className="animation-link"
-            >
-              hello@womazing.com
-            </a>
-          </div>
-        </div>
-        <div className={styles.row}>
           <div className={styles.copyright}>
             <span className={styles['copyright-item']}>© Все права защищены</span>
-            <a href="/test" className={`animation-link ${styles['copyright-item']}`}>Политика конфиденциальности</a>
-            <a href="/test" className={`animation-link ${styles['copyright-item']}`}>Публичная оферта</a>
+            <Link to="/test" className={`animation-link ${styles['copyright-item']}`}>Политика конфиденциальности</Link>
+            <Link to="/test" className={`animation-link ${styles['copyright-item']}`}>Публичная оферта</Link>
           </div>
+        </div>
+        <Nav className={`${styles.col} ${styles.nav}`}>
+          <NavList />
           <ul className={styles.categories}>
             <li className={styles['categories-item']}>
               <Link
@@ -73,41 +62,45 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-          <div className={styles['end-col']}>
-            <ul className={styles.socials}>
-              <li className={styles['socials-item']}>
-                <a
-                  href="http://www.instagram.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles['socials-link']}
-                >
-                  <InstagramIcon />
-                </a>
-              </li>
-              <li className={styles['socials-item']}>
-                <a
-                  href="http://www.facebook.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles['socials-link']}
-                >
-                  <FacebookIcon />
-                </a>
-              </li>
-              <li className={styles['socials-item']}>
-                <a
-                  href="http://www.twitter.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles['socials-link']}
-                >
-                  <TwitterIcon />
-                </a>
-              </li>
-            </ul>
-            <img src={paymentImg} alt="Способы оплаты" />
+        </Nav>
+        <div className={styles.col}>
+          <div className={styles.contacts}>
+            <Phone />
+            <a href="mailto:hello@womazing.com" className="animation-link">hello@womazing.com</a>
           </div>
+          <ul className={styles.socials}>
+            <li className={styles['socials-item']}>
+              <a
+                href="http://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles['socials-link']}
+              >
+                <InstagramIcon />
+              </a>
+            </li>
+            <li className={styles['socials-item']}>
+              <a
+                href="http://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles['socials-link']}
+              >
+                <FacebookIcon />
+              </a>
+            </li>
+            <li className={styles['socials-item']}>
+              <a
+                href="http://www.twitter.com/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles['socials-link']}
+              >
+                <TwitterIcon />
+              </a>
+            </li>
+          </ul>
+          <img src={paymentImg} alt="Способы оплаты" />
         </div>
       </div>
     </footer>
