@@ -88,10 +88,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1rem;
 
   @include resolution(992) {
     align-items: center;
+  }
+}
+
+.contacts-item {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
   }
 }
 

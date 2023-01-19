@@ -65,8 +65,8 @@ const Footer = () => {
         </Nav>
         <div className={styles.col}>
           <div className={styles.contacts}>
-            <Phone />
-            <a href="mailto:hello@womazing.com" className="animation-link">hello@womazing.com</a>
+            <Phone className={styles['contacts-item']} />
+            <a href="mailto:hello@womazing.com" className={`animation-link ${styles['contacts-item']}`}>hello@womazing.com</a>
           </div>
           <ul className={styles.socials}>
             <li className={styles['socials-item']}>
