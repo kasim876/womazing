@@ -7,10 +7,10 @@ import {ReactComponent as FacebookIcon} from '../../../assets/images/svg/fb.svg'
 import {ReactComponent as TwitterIcon} from '../../../assets/images/svg/twitter.svg';
 import paymentImg from '../../../assets/images/visa-mastercard.png';
 
-import Logo from '../../shared/logo/Logo';
-import Nav from '../../shared/nav/Nav';
-import NavList from '../../shared/nav/nav-list/NavList';
-import Phone from '../../shared/phone/Phone';
+import Logo from '../../ui/logo/Logo';
+import Nav from '../../ui/nav/Nav';
+import NavList from '../../ui/nav/nav-list/NavList';
+import Phone from '../../ui/phone/Phone';
 
 import styles from './Footer.module.scss';
 

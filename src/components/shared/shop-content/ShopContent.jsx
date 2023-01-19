@@ -2,7 +2,7 @@ import {observer} from 'mobx-react-lite';
 
 import ProductStore from '../../../store/ProductStore';
 
-import Loader from '../loader/Loader';
+import Loader from '../../ui/loader/Loader';
 
 import ShopNav from './shop-nav/ShopNav';
 import ShopList from './shop-list/ShopList';

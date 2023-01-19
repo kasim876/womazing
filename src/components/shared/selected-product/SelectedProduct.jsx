@@ -4,7 +4,7 @@ import {useState} from 'react';
 import validateCount from '../../../helpers/validateCount';
 import BasketStore from '../../../store/BasketStore';
 
-import Loader from '../loader/Loader';
+import Loader from '../../ui/loader/Loader';
 
 import GreenButton from '../../ui/button/green-button/GreenButton';
 

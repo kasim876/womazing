@@ -8,11 +8,11 @@ import BasketStore from '../../../store/BasketStore';
 import {ReactComponent as PhoneIcon} from '../../../assets/images/svg/phone.svg';
 import {ReactComponent as BasketIcon} from '../../../assets/images/svg/bag.svg';
 
-import Logo from '../../shared/logo/Logo';
-import Phone from '../../shared/phone/Phone';
-import Nav from '../../shared/nav/Nav';
-import NavList from '../../shared/nav/nav-list/NavList';
-import Burger from '../../shared/burger/Burger';
+import Logo from '../../ui/logo/Logo';
+import Phone from '../../ui/phone/Phone';
+import Nav from '../../ui/nav/Nav';
+import NavList from '../../ui/nav/nav-list/NavList';
+import Burger from '../../ui/burger/Burger';
 
 import styles from './Header.module.scss';
 

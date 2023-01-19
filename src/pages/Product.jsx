@@ -5,7 +5,7 @@ import {fetchOneProduct} from '../http/productAPI';
 
 import Hero from '../components/shared/hero/Hero';
 import SelectedProduct from '../components/shared/selected-product/SelectedProduct';
-import Loader from '../components/shared/loader/Loader';
+import Loader from '../components/ui/loader/Loader';
 
 const Product = () => {
   const {id} = useParams();

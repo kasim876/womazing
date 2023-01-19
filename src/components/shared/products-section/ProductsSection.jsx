@@ -12,7 +12,7 @@ import {fetchProducts} from '../../../http/productAPI';
 import OutlinedButton from '../../ui/button/outlined-button/OutlinedButton';
 
 import Product from '../product/Product';
-import Loader from '../loader/Loader';
+import Loader from '../../ui/loader/Loader';
 
 import styles from './ProductsSection.module.scss';
 
@@ -40,7 +40,7 @@ const ProductsSection = observer(() => {
       })
       .catch(function(error) {
         if (axios.isCancel(error)) {
-          return;
+          console.error('Запрос отменён');
         }
       });
 
