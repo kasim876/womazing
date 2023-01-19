@@ -1,6 +1,5 @@
 import Nav from '../nav/Nav';
 import NavList from '../nav/nav-list/NavList';
-import Phone from '../phone/Phone';
 
 import styles from './Burger.module.scss';
 
@@ -27,7 +26,6 @@ const Burger = () => {
         <Nav>
           <NavList className={styles['nav-list']} />
         </Nav>
-        <Phone />
       </div>
       <div className={`js-burger-blackout ${styles.blackout}`} onClick={clickHandle}></div>
     </div>
