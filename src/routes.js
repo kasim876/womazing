@@ -1,13 +1,15 @@
+import {lazy} from 'react';
+
 import {HOME_ROUTE, SHOP_ROUTE, ABOUT_ROUTE, PRODUCT_ROUTE, CONTACTS_ROUTE, BASKET_ROUTE, BOOKING_ROUTE, BOOKING_SUCCESS_ROUTE} from './utils/consts';
 
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import About from './pages/About';
-import Product from './pages/Product';
-import Contacts from './pages/Contacts';
-import Basket from './pages/Basket';
-import Booking from './pages/Booking';
-import BookingSuccess from './pages/BookingSuccess';
+const Home = lazy(() => import('./pages/Home'));
+const Shop = lazy(() => import('./pages/Shop'));
+const About = lazy(() => import('./pages/About'));
+const Product = lazy(() => import('./pages/Product'));
+const Contacts = lazy(() => import('./pages/Contacts'));
+const Basket = lazy(() => import('./pages/Basket'));
+const Booking = lazy(() => import('./pages/Booking'));
+const BookingSuccess = lazy(() => import('./pages/BookingSuccess'));
 
 export const ROUTES = [
   {

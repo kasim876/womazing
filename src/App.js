@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, Suspense} from 'react';
 import {BrowserRouter, useLocation} from 'react-router-dom';
 
 import 'normalize.css';
@@ -6,7 +6,16 @@ import './styles/App.scss';
 
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
+import Loader from './components/ui/loader/Loader';
 import AppRouter from './components/AppRouter';
+
+function AppLoader() {
+  return (
+    <div className="app-loader">
+      <Loader />
+    </div>
+  );
+}
 
 function App() {
   const handleScroll = () => {
@@ -36,11 +45,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppWrapper>
-        <Header />
-        <AppRouter />
-        <Footer />
-      </AppWrapper>
+      <Suspense fallback={<AppLoader />}>
+        <AppWrapper>
+          <Header />
+          <AppRouter />
+          <Footer />
+        </AppWrapper>
+      </Suspense>
     </BrowserRouter>
   );
 }
