@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'scroll-behavior-polyfill';
 
 import App from './App';
 

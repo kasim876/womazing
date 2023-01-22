@@ -17,6 +17,7 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "sass": "^1.57.1",
+    "scroll-behavior-polyfill": "^2.0.13",
     "stylelint": "^14.16.0",
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-order": "^5.0.0",
